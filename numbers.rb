@@ -1,4 +1,3 @@
-
 #working with numbers in ruby
 
  first_val = 23
