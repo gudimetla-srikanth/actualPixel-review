@@ -1,4 +1,3 @@
-
 # a = "srikanth"
 # puts a.slice(1,4)   #output gives rika
 
