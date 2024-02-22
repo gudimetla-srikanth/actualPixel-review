@@ -35,6 +35,28 @@
 # while 2<3 do
 #   print "hi"
 # end
+# puts "enter your code"
+# obj={name:'srikanth'}
+# puts obj[:name]
+
+#nesting scope is not applicable in ruby
+# def create
+#   puts "I am none"
+#   $name = "srikanth"
+#   puts $name
+#   def create_one
+#     puts "I am one"
+#     puts $name
+#   end
+#   create_one
+# end
+# create
+# puts $name     #global variables declared in functions can be used in outside of the decalred scope.
+
+
+
+
+
 
 
 
