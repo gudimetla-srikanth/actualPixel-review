@@ -43,3 +43,16 @@
 # 20.times {print"-"}
 # puts ""
 # puts string.reverse
+
+
+# obj={
+#   'user'=>'srikanth'
+# }
+# obj1=obj
+# obj1['user'] = "srinicvas"  #changes obj
+# puts obj
+# puts obj1
+# a=23
+# b=a
+# b=43
+# puts a,b
