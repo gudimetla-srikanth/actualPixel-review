@@ -51,10 +51,17 @@
 #   create_one
 # end
 # create
-# puts $name     #global variables declared in functions can be used in outside of the decalred scope.
+# puts $name     #global variables declared in functions can be used in outside of the decalred scop
 
-
-
+#exceptions
+# puts "Exceptions started"
+# begin
+#   raise "new exception"
+# rescue 
+#   puts "exception rescued"
+# ensure
+#   puts "I am excuted regardless"
+# end
 
 
 
