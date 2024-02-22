@@ -21,7 +21,7 @@ puts module_obj.printing   #printing module print method
 puts module_obj.writing    #printing module writing method
 
 
-#mixins are nothing but including module methods in class are called mixins
+#mixins are nothing but including module in class are called mixins
 #modules are similar like class but not class
 
 
