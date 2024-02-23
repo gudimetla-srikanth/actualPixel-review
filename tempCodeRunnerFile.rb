@@ -1,1 +1,1 @@
-puts module_obj.name
+@@name2 = "ratan tata"
