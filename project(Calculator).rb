@@ -1,5 +1,4 @@
 
-
 #Simple calculator project 
 
 puts "Enter first_value :"
