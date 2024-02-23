@@ -1,6 +1,5 @@
 
 #ruby supports dictionaries simply we call them as hashes in ruby.
-
 my_hash = {'name'=>"srikanth",'position'=>"trainee"}
 puts my_hash
 
