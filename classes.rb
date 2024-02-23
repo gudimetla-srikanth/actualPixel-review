@@ -2,28 +2,28 @@
 #classes in ruby
 #getters and setters using in class
 
-class Student     #declaration of the class
-  @student_name
-  @student_branch
+# class Student     #declaration of the class
+#   @student_name
+#   @student_branch
 
-  #setting name
-  def student_name=(name)
-    @student_name = name
-  end
+#   #setting name
+#   def student_name=(name)
+#     @student_name = name
+#   end
 
-  #getting name
-  def student_name
-    @student_name
-  end
+#   #getting name
+#   def student_name
+#     @student_name
+#   end
 
-  def to_s        #Intially it will be called when object is created
-    return "I will be called when object created"
-  end
-end
+#   def to_s        #Intially it will be called when object is created
+#     return "I will be called when object created"
+#   end
+# end
 
-student_obj = Student.new    #creating object for Student class
-student_obj.student_name="srikanth"
-puts student_obj.student_name
+# student_obj = Student.new    #creating object for Student class
+# student_obj.student_name="srikanth"
+# puts student_obj.student_name
 
 
 #setting setters and getters for every variable becomes very hard.so,ruby provides "attr_accessor" to set and access the variables very easily
