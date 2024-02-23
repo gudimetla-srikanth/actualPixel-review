@@ -1,4 +1,3 @@
-
 #ruby arrays are similar to remaining programming languages arrays
 #ruby arrays are rich in library
 
