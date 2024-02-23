@@ -1,4 +1,3 @@
-
 #Ruby programming language is dynamic means no need to assign types before using.
 # puts "welcome to ruby world"
 

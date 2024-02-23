@@ -1,6 +1,5 @@
 
 #classes in ruby
-
 #getters and setters using in class
 
 class Student     #declaration of the class

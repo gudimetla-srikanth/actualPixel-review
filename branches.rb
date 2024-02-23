@@ -1,4 +1,3 @@
-
 #ruby conditional statements
 # operators used with branches are generally <, >, <=, >=, ==
 first_name = gets.chomp

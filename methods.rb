@@ -1,5 +1,5 @@
 
-# methods in ruby language
+# methods in ruby language are similar to any other languages
 
 # method without parameters
 def my_print

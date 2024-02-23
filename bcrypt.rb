@@ -1,4 +1,3 @@
-
 # importing "bcrypt" gem in file
 
 require "bcrypt"
