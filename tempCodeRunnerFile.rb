@@ -1,1 +1,1 @@
-puts Student.method2 
+nested_obj = Parent::Child.new

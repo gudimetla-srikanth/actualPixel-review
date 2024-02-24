@@ -45,20 +45,62 @@
 
 #setting values to variables
 
-class StudentThree
-  attr_accessor :student_name,:student_branch
+# class StudentThree
+#   attr_accessor :student_name,:student_branch
 
-  #setting initial values
-  def initialize(name,branch)
-    @student_name = name
-    @student_branch = branch
-  end
+#   #setting initial values
+#   def initialize(name,branch)
+#     @student_name = name
+#     @student_branch = branch
+#   end
 
-  #default function or constructor of class
-  def to_s
-   return "My name is #{@student_name} and my branch is #{@student_branch}"
-  end
-end
+#   #default function or constructor of class
+#   def to_s
+#    return "My name is #{@student_name} and my branch is #{@student_branch}"
+#   end
+# end
 
-student_obj_three = StudentThree.new("srikanth","cse")
-puts student_obj_three
+# student_obj_three = StudentThree.new("srikanth","cse")
+# puts student_obj_three
+
+#nested classes in ruby
+
+# class Parent
+#   # class ChildNested
+#   # end
+#   # def print
+#   #   @@name = "srikanth"
+#   # end
+#   # attr_accessor :name,:data
+#   # def print
+#   #   @@name = "srikanth"
+#   # end
+
+#   #this below code works properly
+#   # Name = "srikanth"
+#   # def print
+#   #   Name
+#   # end
+  
+# end
+# obj = Parent.new
+# puts obj.print
+
+# class Parent
+#   Name = "I am aactul pixel"
+#   # puts Name.class
+#   class Child
+#     def print
+#       puts "I am nsested class"
+#       Name
+      
+#     end
+#   end
+# end
+# parent_obj = Parent.new
+#this is one way of creating objects for nested classes
+# nested_obj = Parent::Child.new
+#or
+# nested_obj = parent_obj.class::Child.new
+# puts nested_obj.print
+# puts parent_obj.class
