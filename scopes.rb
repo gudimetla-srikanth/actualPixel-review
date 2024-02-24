@@ -50,18 +50,33 @@ we have four types of scopes in ruby.They are
 # obj = Student.new
 # puts obj
 
-class Basic
-  Name = "srikanth"
+# class Basic
+#   Name = "srikanth"
 
-  #constants can be accessed in declared scope environment in class
-  def to_s
-    Name      
-  end
-  # we can create modules in classes
-  # module New_One
-  #   data = "srikanth"
-  # end
-end
-obj = Basic.new
-puts obj
+#   #constants can be accessed in declared scope environment in class
+#   def to_s
+#     Name      
+#   end
+#   # we can create modules in classes
+#   # module New_One
+#   #   data = "srikanth"
+#   # end
+# end
+# obj = Basic.new
+# puts obj
+
+
+#scopes in modules
+
+# module Student 
+#   Name = "srikanth"
+#   class Child
+#     def prints
+#       Name
+#     end 
+#   end
+# end 
+# obj = Student::Child.new
+# puts obj.prints
+
 
