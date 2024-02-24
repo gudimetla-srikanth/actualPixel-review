@@ -50,4 +50,10 @@ end
 #module name.method name  (method should has module name prefixed with it is original name in the module also)
 
 
-
+module DataOne
+  def DataOne.print
+    puts "hi"
+   return @@name = "srikanth"   #does not give value
+  end
+end
+DataOne.print
