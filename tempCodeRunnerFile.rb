@@ -1,0 +1,1 @@
+puts Student.method2 

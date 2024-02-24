@@ -30,3 +30,27 @@
 # end
 # obj = Parent.new
 # # puts obj.printing   #it gives error
+
+#self method in classes
+
+# class Student
+#   @@name = "srikanth"   #It is a class variable
+#   def method1
+#     puts "print all methods"
+#     puts self.__id__
+#   end
+#   def self.method2
+#     puts "this is as class method"
+#     puts self.__id__
+#   end
+# end
+# obj = Student.new
+# puts obj.__id__      #It gives object id
+# puts Student.__id__   #It gives class id
+# puts "class id val",Student.__id__
+# puts "object id val",obj.__id__
+# puts Student.method1    #can not access nethod using class variable
+# puts Student.method2      #class method can be called with class name outside of the class
+# puts obj.method2          #object can not access method prefixed with self
+# puts obj.method1
+
