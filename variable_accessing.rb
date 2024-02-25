@@ -34,3 +34,10 @@
 # obj=Student.new 
 # Student.print
 
+# a="srikanth"
+# def name(val)
+#   val=val+"gudimetla"
+# end
+# name(a)
+# puts a
+
