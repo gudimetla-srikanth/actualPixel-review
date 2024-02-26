@@ -54,3 +54,4 @@
 # puts obj.method2          #object can not access method prefixed with self
 # puts obj.method1
 
+
