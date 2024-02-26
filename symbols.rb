@@ -29,3 +29,14 @@ symbols are used in methods,classes mainly
 #symbols in classes are used to define instance variables
 #symbols are very fast compared to strings
 
+# str = "print"
+# def print
+#   puts "hi hello"
+# end
+# send(str)
+# puts str
+# str = :srikanth
+# str1=:gudimetla
+# str2 = "srikanth"
+# str3 = "gudimetla"
+# str3=str+str2  #gives error
