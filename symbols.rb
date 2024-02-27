@@ -41,4 +41,6 @@ symbols are used in methods,classes mainly
 # str3 = "gudimetla"
 # str3=str+str2  #gives error
 
+# hash = {name: :username}
+# puts hash[:name].slice(2,3)
 
