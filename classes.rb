@@ -104,3 +104,12 @@
 # nested_obj = parent_obj.class::Child.new
 # puts nested_obj.print
 # puts parent_obj.class
+
+#exceptions in ruby
+# begin
+#   wfjhr
+# rescue => e 
+#   puts "exception railsed #{e.message}"
+# ensure 
+#   puts "I will be excuted"
+# end
