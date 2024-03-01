@@ -6,15 +6,15 @@ class ArticlesController < ApplicationController
   def show 
   end
   def new
+    @article = Article.new
   end
-  def edit 
+  def edit
   end
   def update 
     if @article.update(param_caller)
       flash[:notice] = "Article was updated successfully!"
       redirect_to @article
     else
-      flash[:notice] = "Articles was declined by database for updation"
       render 'edit'
     end
   end
@@ -24,7 +24,6 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article was created successfully!"
       redirect_to @article
     else
-      flash[:notice] = "Articles was declined by database for creation"
       render 'new'
     end
   end

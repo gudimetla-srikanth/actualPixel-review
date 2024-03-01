@@ -1,15 +1,23 @@
-<h1>This edit page</h1>
-<%= form_with(model: @article, local: true) do |f| %>
-<p> 
-  <%= f.label :title %><br/> 
-  <%= f.text_field :title %>
-</p>
-<p>
-  <%= f.label :description %><br/> 
-  <%= f.text_area :description %> 
-</p>
-<p>
-  <%= f.submit %> 
-</p>
-<% end %>
-<%= link_to "cancel and return to all articles page",articles_path %>
+
+<div class="my-5 mx-5 text-center border border-primary">
+  <%= form_with(model: @article, local: true) do |f| %>
+    <p>
+      <%= f.label :title ,class: "my-2 font-weight-bold"%>
+    </p>
+    <p>
+      <%= f.text_field :title , class: "w-50" %>
+    </p>
+    <p>
+      <%= f.label :description ,class: "font-weight-bold"%>
+    </p>
+    <p>
+      <%= f.text_area :description , class: "w-50" %>
+    </p>
+    <p>
+      <%= f.submit%>
+    </p>
+    <% end %>
+    <p>
+      <%= link_to "Back" ,article_path(@article),class: "btn btn-primary w-25" %>
+    </p>
+</div>
