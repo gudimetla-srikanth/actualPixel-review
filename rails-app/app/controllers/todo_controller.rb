@@ -11,6 +11,7 @@ class TodoController < ApplicationController
       #   flash[:my] = "error occured at end"
       #   render "index"
       # end
+      
     rescue => e 
       render html: e.message 
     end
