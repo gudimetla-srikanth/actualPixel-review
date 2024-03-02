@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
     if @article.update(param_caller)
       redirect_to @article
     else
+      flash[:notice] = "Updating has been rejected due to missing fields or errors"
      render 'edit'
     end
   end
@@ -27,6 +28,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to @article
     else
+      flash[:notice] = "Creating has been rejected due to missing fields or errors"
       render 'new'
     end
   end
