@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(params.require(:article).permit(:title,:description)) 
+      flash[:notice] = "Article updated successfully"
       redirect_to articles_path 
     else 
       render "edit"
@@ -29,7 +30,9 @@ class ArticlesController < ApplicationController
 
   def create 
     @article = Article.new(params.require(:article).permit(:title,:description))
+    @article.user = User.last
     if @article.save 
+      flash[:notice] = "Article created successfully"
       redirect_to articles_path 
     else
       render "new" 

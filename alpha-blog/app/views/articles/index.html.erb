@@ -2,15 +2,15 @@
 <div class="container my-3">
   <div class="card text-center">
     <div class="card-header">
-      <%= article.title %>
+      <%= article.user.username %>
     </div>
     <div class="card-body">
       <h5 class="card-title text-success"><%= article.title %></h5>
       <p class="card-text"><%= truncate(article.description,length: 100) %></p>
       <div class="d-flex justify-content-center">
-      <p><%= link_to "Show", article_path(article),class: "btn btn-success m-1 px-3" %></p>
-      <p><%= link_to "Edit", edit_article_path(article),class: "btn btn-warning m-1 px-3" %></p>
-      <p><%= button_to "Delete", article_path(article),method: :delete,class: "btn btn-danger m-1 px-3" %></p>
+      <p><%= link_to "Show", article_path(article),class: "btn btn-outline-success m-1 px-3" %></p>
+      <p><%= link_to "Edit", edit_article_path(article),class: "btn btn-outline-warning m-1 px-3" %></p>
+      <p><%= button_to "Delete", article_path(article),method: :delete,class: "btn btn-outline-danger m-1 px-3" %></p>
     </div>
     </div>
     <div class="card-footer text-muted">
