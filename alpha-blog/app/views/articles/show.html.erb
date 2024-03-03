@@ -1,3 +1,9 @@
-<h2><%= @article.title%></h2>
-<h3><%= @article.description%></h3>
-<h2><%= link_to "Return to all articles",articles_path %></h2>
+<div class="container mt-5 bg-dark py-5 rounded">
+  <div class="jumbotron">
+    <h1 class="display-4 text-primary"><%= @article.title%></h1>
+    <p class="lead text-white"><%= @article.description%></p>
+    <p><%= link_to "Show", article_path(@article),class: "btn btn-success px-3 w-25" %></p>
+    <p><%= link_to "Edit", edit_article_path(@article),class: "btn btn-warning px-3 w-25" %></p>
+    <p><%= button_to "Delete", article_path(@article),method: :delete,class: "btn btn-danger px-3 w-25" %></p>
+  </div>
+</div>

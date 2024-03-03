@@ -10,7 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="position-relative vh-100">
+    <%= render "layouts/navbar" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
