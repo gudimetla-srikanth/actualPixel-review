@@ -1,5 +1,5 @@
 <div class="container m-5 p-5">
-  <%=form_with model: @article do |form|%>
+  <%= form_with model: @article do |form| %>
   <form>
     <div class="form-group row m-2">
       <label class="col-sm-2 col-form-label"><%= form.label :title %></label>
@@ -13,7 +13,7 @@
         <%= form.text_area :description,class: "form-control" %>
       </div>
     </div>
-    <%= form.submit class: "btn btn-outline-warning" %>
+    <%= form.submit class: "btn btn-success" %>
   </form>
   <%end%>
 </div>
