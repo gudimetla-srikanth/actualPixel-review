@@ -1,0 +1,8 @@
+  <div class="container">
+    <% flash.each do |msg| %>
+    <div class="alert alert-success alert-dismissible d-flex justify-content-left">
+      <strong class="w-100"><%= msg[1]%></strong>
+      <div class="close btn btn-success" data-bs-dismiss="alert" aria-label="close">&times;</div>
+    </div>
+    <%end%>
+  </div>

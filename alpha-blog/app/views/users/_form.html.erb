@@ -1,0 +1,26 @@
+<div class="container p-3 mt-1">
+  <%= form_with model: @user do |form| %>
+    <% if @user.errors.any? %>
+      <% @user.errors.full_messages.each do |error| %>
+      <div class="alert alert-danger alert-dismissible d-flex justify-content-left">
+        <strong class="w-100"><%= error%></strong>
+        <div class="close btn btn-danger" data-bs-dismiss="alert" aria-label="close">&times;</div>
+      </div>
+      <%end%>
+    <%end%>
+    <div>
+      <h3><%= form.label :username %></h3>
+      <p><%= form.text_field :username ,class: "border border-0 rounded w-100 py-3 px-3" %></p>
+    </div>
+    <div>
+      <h3><%= form.label :email %></h3>
+      <p><%= form.email_field :email,class: "border border-0 rounded w-100 py-3 px-3" %></p>
+    </div>
+    <div>
+      <h3><%= form.label :password %></h3>
+      <p><%= form.text_field :password,class: "border border-0 rounded w-100 py-3 px-3" %></p>
+    </div>
+  </br>
+      <%= form.submit class: "btn btn-warning" %>
+  <%end%>
+</div>
