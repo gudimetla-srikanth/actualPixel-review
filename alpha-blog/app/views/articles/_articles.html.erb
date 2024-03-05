@@ -1,0 +1,44 @@
+<% obj.each do |article| %>
+<div class="d-flex justify-content-center">
+  <div class="w-50">
+    <div class="container my-2">
+      <div class="card text-center">
+        <div class="card-header">
+          <% if obj == @article %>
+            <%= article.user.username %>
+          <% end %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-success">
+            <% if obj == @article %>
+              <%= article.title %>
+            <%else%>
+              <%=article.username%>
+            <% end %>
+          </h5>
+          <p class="card-text">
+            <% if obj == @article %>
+              <%= truncate(article.description,length: 100) %>
+            <%else%>
+              <%= pluralize(article.articles.count,"article") %>
+            <% end %>
+          </p>
+          <div class="d-flex justify-content-center">
+            <% if obj == @article %>
+            <p><%= link_to "Show", article_path(article),class: "btn btn-outline-success m-1 px-3" %></p>
+            <p><%= link_to "Edit", edit_article_path(article),class: "btn btn-outline-warning m-1 px-3" %></p>
+            <p><%= button_to "Delete", article_path(article),method: :delete,class: "btn btn-outline-danger m-1 px-3" %></p>
+            <%else%>
+            <p><%= link_to "Show", article,class: "btn btn-outline-success m-1 px-3" %></p>
+            <p><%= link_to "Edit", edit_user_path(article),class: "btn btn-outline-warning m-1 px-3" %></p>
+            <% end %>
+        </div>
+        </div>
+        <div class="card-footer text-muted">
+          created <%= time_ago_in_words(article.created_at) %> ago, updated <%= time_ago_in_words(article.updated_at) %> ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%end%>

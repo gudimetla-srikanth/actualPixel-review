@@ -1,4 +1,7 @@
 class AppController < ApplicationController 
+  def newbook
+    redirect_to root_path
+  end
   def index
   end
   def new
