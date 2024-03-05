@@ -28,3 +28,12 @@
     margin-right: 1em; }
   .flickr_pagination .next_page {
     margin-left: 1em; }
+
+.jumbotron {
+      background-image: asset-url('blog.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 425px;
+      border-radius: 10px;
+     }
