@@ -79,4 +79,11 @@ we have four types of scopes in ruby.They are
 # obj = Student::Child.new
 # puts obj.prints
 
+# data = "srikanth"
+# puts data 
+# val = !!data
+# puts val
+
+# (||=) this operator is used to get the data if in case data is available it will return the data instead of making call to database
+
 
