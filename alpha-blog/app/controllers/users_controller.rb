@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def destroy 
     @user.destroy
-    session[:id] = nil if current_user
+    session[:id] = nil if current_user.id == @user.id
     redirect_to users_path 
   end
 
