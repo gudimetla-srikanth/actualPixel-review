@@ -3,12 +3,14 @@
       <h1 class="text-center"><%= @user.username%></h1>
       <br>
       <div class="d-flex justify-content-center">
-        <%= link_to "Go Back", users_path,class: "btn btn-success mx-1 px-4" %>
-        <%= link_to "Edit", edit_user_path(@user),class: "btn btn-warning mx-1 px-4" %>
-        <%= button_to "Delete", user_path(@user),method: :delete,class: "btn btn-danger mx-1 px-4" %>
+        <%if login && @user == current_user %>
+          <%= link_to "Edit", edit_user_path(@user),class: "btn btn-warning mx-1 px-4" %>
+          <%= button_to "Delete", user_path(@user),method: :delete,class: "btn btn-danger mx-1 px-4" %>
+        <%end%>
       </div>
     </div>
 </div>
+<div class="container text-center my-2"><%= link_to "[Cancel and Return back to users]",users_path %></div>
 <div class="flickr_pagination mt-3">
   <%= will_paginate @article, :container => false %>
 </div>

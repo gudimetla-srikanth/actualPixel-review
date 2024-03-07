@@ -5,13 +5,13 @@
       <div class="card text-center">
         <div class="card-header">
           <% if obj == @article %>
-            <%= article.user.username %>
+            by <%= link_to article.user.username ,user_path(article.user),class: 'text-primary text-decoration-none'%>
           <% end %>
         </div>
         <div class="card-body">
-          <h5 class="card-title text-success">
+          <h5 class="card-title">
             <% if obj == @article %>
-              <%= article.title %>
+              <%= link_to article.title ,article_path(article),class: 'text-decoration-none  text-success'%>
             <%else%>
               <%=article.username%>
             <% end %>
@@ -26,11 +26,15 @@
           <div class="d-flex justify-content-center">
             <% if obj == @article %>
             <p><%= link_to "Show", article_path(article),class: "btn btn-outline-success m-1 px-3" %></p>
-            <p><%= link_to "Edit", edit_article_path(article),class: "btn btn-outline-warning m-1 px-3" %></p>
-            <p><%= button_to "Delete", article_path(article),method: :delete,class: "btn btn-outline-danger m-1 px-3" %></p>
+              <%if login && article.user_id == current_user.id %>
+                <p><%= link_to "Edit", edit_article_path(article),class: "btn btn-outline-warning m-1 px-3" %></p>
+                <p><%= button_to "Delete", article_path(article),method: :delete,class: "btn btn-outline-danger m-1 px-3" %></p>
+              <%end%>
             <%else%>
             <p><%= link_to "Show", article,class: "btn btn-outline-success m-1 px-3" %></p>
-            <p><%= link_to "Edit", edit_user_path(article),class: "btn btn-outline-warning m-1 px-3" %></p>
+              <%if login && article == current_user %>
+                <p><%= link_to "Edit", edit_user_path(article),class: "btn btn-outline-warning m-1 px-3" %></p>
+              <%end%>
             <% end %>
         </div>
         </div>

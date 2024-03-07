@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :find_user,only: [:show,:edit,:update,:destroy]
+  before_action :check_user,except: [:show,:index]
   def index 
     @user = User.paginate(page: params[:page], per_page: 2)
   end
@@ -25,19 +26,10 @@ class UsersController < ApplicationController
   end
 
   def destroy 
-    @user.destroy 
+    @user.destroy
+    session[:id] = nil
     redirect_to users_path 
   end
-
-  def create 
-    @user = User.new(param_controller)
-    if @user.save 
-      flash[:notice] = "User created successfully"
-      redirect_to users_path 
-    else
-      render :new, status: :unprocessable_entity 
-    end
-  end 
 
   private 
    def find_user 
