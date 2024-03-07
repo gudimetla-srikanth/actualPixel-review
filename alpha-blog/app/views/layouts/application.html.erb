@@ -10,9 +10,16 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body style="background-color: rgb(175, 175, 184);">
-    <%= render "layouts/navbar" %>
-    <%= render "layouts/msg" %>
-    <%= yield %>
+  <body class="d-flex flex-column" style="background-color: rgb(212, 212, 216);">
+    <div>
+      <%= render "layouts/navbar" %>
+      <%= render "layouts/msg" %>
+    </div>
+    <div class="setting-view">
+      <%= yield %>
+    </div>
+    <div>
+      <%= render "layouts/footer" %>
+    </div>
   </body>
 </html>

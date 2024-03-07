@@ -1,9 +1,9 @@
 <div class="d-flex justify-content-center p-3 mt-3">
-    <div class="w-50 border border-1 p-4 border-black rounded">
+    <div class="w-50  p-4 border-black rounded">
       <h1 class="text-center"><%= @user.username%></h1>
       <br>
       <div class="d-flex justify-content-center">
-        <%if login && @user == current_user %>
+        <%if login && ( @user == current_user || current_user.admin?) %>
           <%= link_to "Edit", edit_user_path(@user),class: "btn btn-warning mx-1 px-4" %>
           <%= button_to "Delete", user_path(@user),method: :delete,class: "btn btn-danger mx-1 px-4" %>
         <%end%>

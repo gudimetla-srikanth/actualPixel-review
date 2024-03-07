@@ -21,13 +21,14 @@ class UsersController < ApplicationController
       flash[:notice] = "User updated successfully"
       redirect_to users_path 
     else 
+      flash.now[:alert] = 'User has not been updated'
       render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy 
     @user.destroy
-    session[:id] = nil
+    session[:id] = nil if current_user
     redirect_to users_path 
   end
 

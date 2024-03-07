@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         flash[:notice] = "User logined"
         redirect_to users_path
       else
-        flash.now[:notice] = "Some error occured while logging in"
+        flash.now[:alert] = "Error occured while logging in"
         render :login,status: :unprocessable_entity 
       end
     else 
@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
       session[:id] = @user.id
       redirect_to users_path 
     else
-      flash.now[:notice] = "Some error occured while registering"
+      flash.now[:alert] = "Some error occured while registering"
       render :login, status: :unprocessable_entity 
     end
   end
