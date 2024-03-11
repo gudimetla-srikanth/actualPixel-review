@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
   def index 
-    @category = Category.all
+    @category = Category.paginate(page: params[:page], per_page: 2)
   end
   def create 
     @category = Category.new(params.require(:category).permit(:name))
