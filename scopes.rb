@@ -86,4 +86,14 @@ we have four types of scopes in ruby.They are
 
 # (||=) this operator is used to get the data if in case data is available it will return the data instead of making call to database
 
-
+# obj = "srikanth"
+# obj1="srikanth"
+# puts "This is for 'strings'"
+# puts obj.object_id
+# puts obj1.object_id
+object = :srikanth
+# object1 = :srikanth
+# puts "This is for 'symbols'"
+# puts object.object_id
+# puts object1.object_id
+# puts object.slice(1,4)
