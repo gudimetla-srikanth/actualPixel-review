@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post 'login',to:'sessions#login_user'
   post 'newuser',to:'sessions#create'
   delete "logout",to:'sessions#logout'
+  resources :categories
 end

@@ -1,0 +1,18 @@
+<% @category.each do |category| %>
+<div class="d-flex justify-content-center">
+  <div class="w-50">
+    <div class="container my-2">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title text-success">
+            <%= category.name%>
+          </h5>
+        </div>
+        <div class="card-footer text-muted">
+          created <%= time_ago_in_words(category.created_at) %> ago, updated <%= time_ago_in_words(category.updated_at) %> ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%end%>
