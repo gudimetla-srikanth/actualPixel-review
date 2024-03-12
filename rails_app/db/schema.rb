@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_12_092500) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_12_132604) do
   create_table "articles", force: :cascade do |t|
     t.string "name"
     t.string "password_digest"
@@ -30,12 +30,61 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_12_092500) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.string "comment_name"
+    t.string "able_type"
+    t.integer "able_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "customers_users", id: false, force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "customer_id", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "event_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "my_id"
+  end
+
+  create_table "messages_users", id: false, force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "message_id", null: false
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "news_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ones", force: :cascade do |t|
+    t.string "one_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "threes", force: :cascade do |t|
+    t.integer "one_id"
+    t.integer "two_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "twos", force: :cascade do |t|
+    t.string "two_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
