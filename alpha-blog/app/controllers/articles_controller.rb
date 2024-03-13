@@ -30,8 +30,11 @@ class ArticlesController < ApplicationController
   end
 
   def create 
+    byebug
     @article = Article.new(params.require(:article).permit(:title,:description))
     @article.user = current_user
+    @cat = Category.find(params[:article][:category_id])
+    @article.categories << @cat
     if @article.save
       flash[:notice] = "Article created successfully"
       redirect_to articles_path 
