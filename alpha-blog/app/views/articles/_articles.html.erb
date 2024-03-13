@@ -6,6 +6,11 @@
         <div class="card-header">
           <% if obj == @article %>
             by <%= link_to article.user.username ,user_path(article.user),class: 'text-primary text-decoration-none'%>
+           <div class="m-1">
+            <% article.categories.each do |category|%>
+              <span class="bg-primary rounded p-1 text-white"><%= category.name %></span>
+            <%end%>
+           </div>
           <% end %>
         </div>
         <div class="card-body">

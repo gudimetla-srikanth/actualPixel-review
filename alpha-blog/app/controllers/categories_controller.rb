@@ -15,7 +15,26 @@ class CategoriesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-  
+  def show 
+    @category = Category.find(params[:id])
+  end
+  def edit
+    @category = Category.find(params[:id])
+  end
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to categories_path
+  end
+  def update 
+    @category = Category.find(params[:id])
+    if @category.update(params.require(:category).permit(:name)) 
+      flash[:notice] = "Category updated successfully"
+      redirect_to categories_path 
+    else 
+      render :edit, status: :unprocessable_entity
+    end
+  end
   private 
   def require_admin
     if !(login && current_user.admin) 
