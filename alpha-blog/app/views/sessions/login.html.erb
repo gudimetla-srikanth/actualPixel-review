@@ -1,7 +1,7 @@
 
 <div class="container p-3 mt-1 rounded">
   <%= form_with scope: :user,url: '/login',local: true do |form| %>
-    <div class="container mt-5 text-center bg-info p-2 d-flex flex-column rounded">
+    <div class="container mt-5 text-center border border-1 border-black p-5 d-flex flex-column rounded">
       <div class="d-flex my-1 justify-content-between">
         <div>
           <h3><%= form.label :email %></h3>
@@ -20,7 +20,7 @@
       </div>
       <br>
       <div>
-         <%= form.submit "Login",class: "w-50 btn btn-warning" %>
+         <%= form.submit "Login",class: "w-50 btn btn-outline-success" %>
       </div>
     </div>
   <%end%>
