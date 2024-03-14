@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root "todos#newpage"
-  get "oldpage",to:"todos#oldpage"
+  root "todos#index"
+  resources :todos
 end
