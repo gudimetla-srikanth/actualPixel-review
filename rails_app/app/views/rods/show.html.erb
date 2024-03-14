@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @rod %>
+
+<div>
+  <%= link_to "Edit this rod", edit_rod_path(@rod) %> |
+  <%= link_to "Back to rods", rods_path %>
+
+  <%= button_to "Destroy this rod", @rod, method: :delete %>
+</div>

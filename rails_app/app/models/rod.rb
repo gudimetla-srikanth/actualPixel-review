@@ -1,0 +1,2 @@
+class Rod < ApplicationRecord
+end

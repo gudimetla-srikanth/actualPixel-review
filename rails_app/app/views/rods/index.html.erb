@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Rods</h1>
+
+<div id="rods">
+  <% @rods.each do |rod| %>
+    <%= render rod %>
+    <p>
+      <%= link_to "Show this rod", rod %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New rod", new_rod_path %>
