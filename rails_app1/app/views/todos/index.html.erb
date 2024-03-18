@@ -1,1 +1,4 @@
-<%= link_to "new todo",new_todo_path %>
+<h1>Hii how are you</h1>
+<% if @todo.any? %>
+ <%= render @todo %>
+<%end%>
