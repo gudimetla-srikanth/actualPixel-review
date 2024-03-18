@@ -10,18 +10,22 @@
           <div class="ui small feed">
             <div class="event">
               <div class="content">
-                <div class="summary">
-                  <em>Elliot Fu</em> : added as a friend
-                </div>
+                  <% @messages.each do |message| %>
+                  <div class="summary">
+                  <em><%=message.user.username%></em> : <%=message.message_body%>
+                  </div>
+                  <%end%>
               </div>
             </div>
           </div>
         </div>
         <div class="extra content">
-          <div class="ui fluid action input">
-            <input type="text" placeholder="Enter a message...">
-            <div class="ui button">Send</div>
+          <%= form_with scope: :message,url: '/create' do |f| %>
+          <div class="ui container center aligned">
+            <%=f.text_field :message_body%>
+            <%=f.submit "send"%>
           </div>
+          <%end%>
         </div>
       </div>
     </div>
