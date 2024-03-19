@@ -1,2 +1,0 @@
-class Rod < ApplicationRecord
-end
