@@ -9,12 +9,8 @@
         <div class="ui content">
           <div class="ui small feed">
             <div class="event">
-              <div class="content">
-                  <% @messages.each do |message| %>
-                  <div class="summary">
-                  <em><%=message.user.username%></em> : <%=message.message_body%>
-                  </div>
-                  <%end%>
+              <div class="content" id="message">
+                  <%= render @messages %>
               </div>
             </div>
           </div>
