@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   def index 
-    @todo = Todo.all
+    @todoval = Todo.all
   end
 
   #path "new_todo"

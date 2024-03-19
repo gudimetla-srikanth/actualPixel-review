@@ -4,4 +4,5 @@ Rails.application.routes.draw do
  post 'create',to:'chatrooms#create'
  post 'login',to:'sessions#create'
  delete 'logout',to:'sessions#destroy'
+ mount ActionCable.server,at:'/cable'
 end

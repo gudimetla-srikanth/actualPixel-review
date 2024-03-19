@@ -7,8 +7,7 @@ class ChatroomsController < ApplicationController
     @message = Message.new(params.require(:message).permit(:message_body))
     @message.user = current_user
     if @message.save 
-      flash[:notice] = 'message sent successfully'
-      redirect_to '/'
+      ActionCable.server.broadcast  "chatroom_channel",foo:@message.message_body
     else
       @messages = Message.all
       flash.now[:error] = 'sending message not done properly'
