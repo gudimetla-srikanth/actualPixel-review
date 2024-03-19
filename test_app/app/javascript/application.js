@@ -2,6 +2,6 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-console.log("I am running")
-var element = document.getElementById('new')
-element.style="color:red;cursor:pointer"
+// console.log("I am running")
+// var element = document.getElementById('new')
+// element.style="color:red;cursor:pointer"
