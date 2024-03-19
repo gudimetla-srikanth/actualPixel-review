@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
   before_action :sever
   def new 
-    render json: @message[:name]
+    ActionCable.server.broadcast 'chat_channel',{data:"hi"}
   end
   private 
   def sever
