@@ -13,8 +13,14 @@
 
   <body>
     <%= render 'layouts/navbar' %>
+    
     <% flash.each do |msg| %>
-     <%= msg[1] %>
+     <div class="ui warning message">
+      <i class="close icon"></i>
+      <div class="header">
+        <%= msg[1] %>
+      </div>
+    </div>
     <%end%>
     <%= yield %>
   </body>
