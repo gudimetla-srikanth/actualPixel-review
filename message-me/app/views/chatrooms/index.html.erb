@@ -18,8 +18,8 @@
         <div class="extra content">
           <%= form_with scope: :message,url: '/create' do |f| %>
           <div class="ui container center aligned">
-            <%=f.text_field :message_body%>
-            <%=f.submit "send"%>
+              <%=f.text_field :message_body,class:'ui raised segment container',id:'chat_inp'%>
+              <%=f.submit "send",class: 'ui button' ,id:'chat_btn'%>
           </div>
           <%end%>
         </div>

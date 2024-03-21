@@ -9,3 +9,12 @@ $(document).on('turbo:load', function() {
   $('.ui.dropdown').dropdown()
 });
 import "channels"
+
+document.addEventListener('keydown',function(event){
+  var chatbtn = document.getElementById('chat_btn')
+  var key = event.key
+  if(key == 'Enter'){
+    chatbtn.click()
+    document.getElementById('chat_inp').value = ''
+  }
+})
