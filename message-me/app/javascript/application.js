@@ -15,6 +15,12 @@ document.addEventListener('keydown',function(event){
   var key = event.key
   if(key == 'Enter'){
     chatbtn.click()
+    var ele = document.getElementById('message')
+    ele.scrollTop = ele.scrollHeight
     document.getElementById('chat_inp').value = ''
   }
+})
+document.addEventListener('DOMContentLoaded',function(){
+ var ele = document.getElementById('message')
+ ele.scrollTop = ele.scrollHeight
 })

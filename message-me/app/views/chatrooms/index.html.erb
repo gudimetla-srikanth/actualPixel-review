@@ -29,15 +29,11 @@
       <div class="ui fluid raised card chatbox">
         <div class="ui content">
           <div class="ui inverted vertical menu">
+            <% @users.each do |user| %>
             <a class="item">
-              Home
+              <%= user.username %>
             </a>
-            <a class="item">
-              Messages
-            </a>
-            <a class="item">
-              Friends
-            </a>
+            <%end%>
           </div>
         </div>
       </div>

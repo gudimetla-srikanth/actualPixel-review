@@ -2,6 +2,7 @@ class ChatroomsController < ApplicationController
   before_action :check_user
   def index 
     @messages = Message.custom_method
+    @users = User.logged_users
   end
   def create 
     @message = Message.new(params.require(:message).permit(:message_body))
