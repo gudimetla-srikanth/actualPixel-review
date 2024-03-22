@@ -1,0 +1,6 @@
+<%= form_with scope: :user,url: login_path do |f| %>
+  <%=f.text_field :username %>
+  <%=f.text_field :password %>
+  <%=f.submit %>
+<%end%>
+<h2><%= link_to "Home",articles_path %></h2>
