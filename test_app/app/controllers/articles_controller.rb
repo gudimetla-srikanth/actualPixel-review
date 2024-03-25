@@ -8,9 +8,8 @@ class ArticlesController < ApplicationController
 
   # /articles
   def create 
-    @article = Article.new(params.require(:article).permit(:article_name))
-    @article.save 
-    redirect_to @article
+    byebug
+    redirect_to articles_path
   end
 
   # /articles/new  new_article

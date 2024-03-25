@@ -1,5 +1,8 @@
 <%= form_with scope: :article,url: articles_path do |f| %>
   <%=f.text_field :article_name %>
   <%=f.submit %>
+  <!-- <% options=[1,2,3,4,5] %>
+  <%=f.select :category_ids,options,multiple:true %> -->
+  <%=f.collection_select :category_ids,Article.all,:id,:article_name,{multiple:true} %>
 <%end%>
 <h2><%= link_to "Home",articles_path %></h2>
