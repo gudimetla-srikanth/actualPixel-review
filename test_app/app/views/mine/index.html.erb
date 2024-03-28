@@ -1,0 +1,8 @@
+<h1>All forms in rails</h1>
+
+<h1>form_tag</h1>
+<%= form_tag(method: "patch") do %>
+<%= form.label :query, "Search for:" %>
+<%= form.text_field :query %>
+<%= form.submit "Search" %>
+<%end%>

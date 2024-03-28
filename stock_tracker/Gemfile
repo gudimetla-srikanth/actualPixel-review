@@ -58,6 +58,7 @@ group :development do
   gem 'iex-ruby-client'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "font-awesome-rails"
 end
 
 group :test do
