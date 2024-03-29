@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # get 'signin',to:'users#signin'
   # post 'login',to:'users#login'
   root "mine#index"
+  get "by",to:"mine#by"
 end
