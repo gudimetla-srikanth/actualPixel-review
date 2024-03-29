@@ -11,8 +11,8 @@
   </head>
 
   <body>
-    <%flash.ech do |msg| %>
-    <h2><%=msg[1] %></h2>
+    <%flash.each do |msg| %>
+    <h2>"<%=msg[1] %>"</h2>
     <%end%>
     <%= yield %>
   </body>
