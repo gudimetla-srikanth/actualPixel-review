@@ -11,11 +11,13 @@ class TodosController < ApplicationController
   def create 
     @todo = Todo.new(params.require(:todo).permit(:title,:description))
     @todo.save
+    flash[:notice] = "Todo created successfully"
     redirect_to root_path
   end
   def update
     @todo = Todo.find(params[:id])
     @todo.update(title:params[:todo][:title],description:params[:todo][:description])
+    flash[:notice] = "Todo updated successfully"
     redirect_to root_path
   end
   def edit 
@@ -24,6 +26,7 @@ class TodosController < ApplicationController
   def destroy 
     @todo = Todo.find(params[:id]) 
     @todo.destroy
+    flash[:notice] = "Todo deleted successfully"
     redirect_to root_path
   end
 end
