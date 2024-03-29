@@ -10,15 +10,23 @@ class TodosController < ApplicationController
   end
   def create 
     @todo = Todo.new(params.require(:todo).permit(:title,:description))
-    @todo.save
+    if @todo.save
     flash[:notice] = "Todo created successfully"
     redirect_to root_path
+    else
+      flash[:alert] = "Todo has not been created"
+      render :new
+    end 
   end
   def update
     @todo = Todo.find(params[:id])
-    @todo.update(title:params[:todo][:title],description:params[:todo][:description])
+    if @todo.update(title:params[:todo][:title],description:params[:todo][:description])
     flash[:notice] = "Todo updated successfully"
     redirect_to root_path
+    else
+      flash[:alert] = "Todo has not been updated"
+      render :edit 
+    end
   end
   def edit 
     @todos = Todo.find(params[:id])
