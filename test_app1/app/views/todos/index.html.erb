@@ -1,0 +1,16 @@
+<h2>Todo's that are in your database</h2>
+<%@todo.each do |todo| %>
+  <div>
+    <strong>Title :</strong><%=todo.title %>
+    <br>
+    <strong>Description :</strong><%=todo.description %>
+  </div>
+  <div>
+    <%= link_to "show",todo_path(todo)%>
+    <%= link_to "edit",edit_todo_path(todo)%>
+    <%= button_to "delete",todo_path(todo),method: :delete%>
+  </div>
+  <br>
+<%end%>
+
+<%= link_to "NEW TODO",new_todo_path%>

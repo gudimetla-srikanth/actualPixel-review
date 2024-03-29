@@ -1,0 +1,16 @@
+<h2>Update the existing todo</h2>
+<%=form_with model: @todos do |form| %>
+  <div>
+    <%=form.text_field :title,placeholder:"Enter title"%>
+  </div>
+  <br>
+  <div>
+    <%=form.text_area :description,placeholder:"Enter description" %>
+  </div>
+  <br>
+  <div>
+    <%=form.submit @todos.id != nil ? "update":"create" %>
+  </div>
+<%end%>
+
+<%= link_to "HOME",todos_path %>
