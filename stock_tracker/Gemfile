@@ -70,3 +70,4 @@ gem "bootstrap"
 gem "sassc-rails"
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'devise', '~> 4.9.3'
+gem 'byebug', '~> 11.1', '>= 11.1.3'

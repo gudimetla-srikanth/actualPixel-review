@@ -2,15 +2,15 @@ class StocksController < ApplicationController
   def search 
     if params[:stock].present?
       @stock = Stock.new_lookup(params[:stock])
-      if @stock.nil? 
-          flash[:alert] = "Incorrect stock name"
-          redirect_to my_portfolio_path 
+      if @stock
+        render "users/my_portfolio" 
       else
-          render "users/my_portfolio"
+        flash.now[:alert] = "Enter inavlid symbol"
+        render "users/my_portfolio"
       end
-    else
-      flash[:alert] = "Entered empty field"
-      redirect_to my_portfolio_path 
+    else 
+      flash.now[:alert] = "Entered empty symbol"
+      render "users/my_portfolio"
     end
   end 
 end
