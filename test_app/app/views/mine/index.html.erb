@@ -1,60 +1,6 @@
 <h1>Form's</h1>
-
-
-
-<%=form_tag url:"/by",method: :get do %>
-
-<%= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
-<%= password_field_tag(:password) %>
-<%= hidden_field_tag(:parent_id, "5") %>
-<%= search_field(:user, :name) %>
-<%= telephone_field(:user, :phone) %>
-<%= date_field(:user, :born_on) %>
-<%= datetime_local_field(:user, :graduation_day) %>
-<%= month_field(:user, :birthday_month) %>
-<%= week_field(:user, :birthday_week) %>
-<%= url_field(:user, :homepage) %>
-<%= email_field(:user, :address) %>
-<%= color_field(:user, :favorite_color) %>
-<%= time_field(:task, :started_at) %>
-<%= number_field(:product, :price, in: 1.0..20.0, step: 0.5) %>
-<%= range_field(:product, :discount, in: 1..100) %>
-<%=submit_tag %>
-<%end%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <h1>Form_with tag</h1> -->
-<!-- <%=form_with url:"by" , method: :get do |f| %> -->
-<!-- <%=f.text_field :name %>
-<%=f.email_field :email %>
-<%=f.range_field :range,in:1..1000 %>
-<%=f.week_field :week %>
-<%=f.month_field :month %>
-<%=f.time_field :time %>
-<%=f.file_field :file %>
-<%=f.text_area :area,size:"20*73" %>
-<%=f.date_field :data %>
-<%=f.password_field :password %>
-<%=f.color_field :color %>
-<%=f.check_box :check %>
-<%=f.check_box :check %>
-<%=f.select :cat,["hi","mine"] ,selected:"mine"%> -->
-<!-- <%=f.select :cat,{
-  name:["hi","mine"],
-  vilage:["bill","sams"]
-},multiple: true %>
-<%=f.submit %> -->
-<!-- <%end%>
- -->
+<%= form_tag("/by",remote: true,:method => "get") do %>
+   <%= label_tag(:q, "Search:") %>
+   <%= text_field_tag(:q) %>
+   <%= submit_tag("Search") %>
+<% end %>

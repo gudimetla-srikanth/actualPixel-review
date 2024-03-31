@@ -3,6 +3,8 @@ class MineController < ApplicationController
     
   end
   def by 
-    byebug
+   respond_to do |format|
+    format.js
+   end
   end
 end
