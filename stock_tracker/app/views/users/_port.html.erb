@@ -1,0 +1,9 @@
+
+<% if @stock.present? %>
+<div class="card mt-3">
+  <div class="card-header">
+    <strong>Symbol</strong> : <%= @stock[:ticker] %> | <strong>company</strong> : <%= @stock[:company] %> | <strong>Price</strong> : <%= @stock[:last_price] %>
+  </div>
+  </div>
+</div>
+<%end%>
