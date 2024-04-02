@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root "users#sample1"
+  root "users#sample"
   get '/turn',to:"users#turn"
 end
