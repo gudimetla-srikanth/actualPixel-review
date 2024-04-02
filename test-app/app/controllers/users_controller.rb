@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # layout "users/sample"
 def sample
   # @val=1
   # render partial: "result",locals:{val:@val}
