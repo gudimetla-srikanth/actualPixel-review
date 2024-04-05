@@ -9,7 +9,7 @@
     </div>
     <div>
       <%= link_to "edit",edit_blog_path( @blog),class:'action'%>
-      <%= button_to "delete",blog_path( @blog),method: :delete,class:'action'%>
+      <%= button_to "delete",blog_path( @blog),method: :delete,data:{ turbo_confirm:"Are you sure?you want to delete?"},class:'action'%>
       <%= link_to "Back to Home",blogs_path,class:'action' %>
     </div>
   </div>

@@ -1,7 +1,0 @@
-<h1 >This is best avakasam</h1>
-<%=form_with scope: :name,url: turn_path,method: :get,remote: true do |form| %>
-  <%=form.text_field :username%>
-  <%=form.submit "save"%>
-<%end%>
-
-<%=turbo_frame_tag "counter"%>
