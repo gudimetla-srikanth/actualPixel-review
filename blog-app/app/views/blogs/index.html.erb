@@ -1,1 +1,20 @@
-<h1>Hii i am index</h1>
+<h1>Blogs</h1>
+<div>
+  <% @blogs.each do |blog| %>
+    <div>
+      <div>Title : <%= blog.title%></div>
+      <div>Description : <%= blog.description%></div>
+      <div>
+        <div>
+          <%= link_to "edit",edit_blog_path(blog)%>
+          <%= link_to "show",blog_path(blog) %>
+          <%= button_to "delete",blog_path(blog),method: :delete%>
+        </div>
+      </div>
+    </div>
+    <br>
+  <%end%>
+</div>
+
+<h2><%= link_to "New blog",new_blog_path%></h2>
+<h2><%= button_to "Sign out",destroy_user_session_path,method: :delete%></h2>

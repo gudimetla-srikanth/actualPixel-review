@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <h2>Title : <%= @blog.title%></h2>
+    <h3>Description : <%= @blog.description%></h3>
+    <div>
+      <%if @blog.image.attached?%>
+      <%= image_tag @blog.image,class:"image-size"%>
+     <%end%>
+    </div>
+    <div>
+      <%= link_to "edit",edit_blog_path( @blog),class:'action'%>
+      <%= button_to "delete",blog_path( @blog),method: :delete,class:'action'%>
+      <%= link_to "Back to Home",blogs_path,class:'action' %>
+    </div>
+  </div>
+</div>
