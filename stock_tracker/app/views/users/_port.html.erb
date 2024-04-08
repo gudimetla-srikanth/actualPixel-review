@@ -2,8 +2,8 @@
 <% if @stock.present? %>
       <div class="card">
         <div class="card-body">
-            <strong>Symbol</strong> : <%= @stock[:ticker] %> | <strong>company</strong> : <%= @stock[:company] %> | <strong>Price</strong> : <%= @stock[:last_price] %>
-            <%= link_to "Add",my_portfolio_path,class:"btn btn-success ms-3"%>
+            <strong>Symbol</strong> : <%= @stock["ticker_symbol"] %> | <strong>company</strong> : <%= @stock["company_name"] %> | <strong>Price</strong> : <%= @stock["last_price"] %>
+            <%= button_to "Add",user_stocks_path(@stock),method: :post,class:"btn btn-success ms-3"%>
         </div>
       </div>
 <%end%>
