@@ -1,9 +1,23 @@
 
 <% if @stock.present? %>
-      <div class="card">
-        <div class="card-body">
-            <strong>Symbol</strong> : <%= @stock["ticker_symbol"] %> | <strong>company</strong> : <%= @stock["company_name"] %> | <strong>Price</strong> : <%= @stock["last_price"] %>
-            <%= button_to "Add",user_stocks_path(@stock),method: :post,class:"btn btn-success ms-3"%>
-        </div>
-      </div>
+<div class=" border border-gray d-flex justify-content-between align-items-center p-2">
+  <div>
+    <strong>Symbol</strong> : <%= @stock["ticker_symbol"] %> | <strong>Company</strong> : <%= @stock["company_name"] %> | <strong>Last-Price</strong> : <%= @stock["last_price"] %>
+  </div>
+  <div>
+    <% if @tracked_stocks.count > 10 %>
+    <button class="btn btn-success" disabled>
+      Your stocks tracking limit reached you can't track it "Remove one to track it"
+    </button>
+    <%else%>
+      <% if check_stock_associted_with_user(@stock)%>
+        <%= button_to "Add to Portfolio",user_stocks_path(@stock),method: :post,class:"btn btn-primary"%>
+      <%else%>
+      <button class="btn btn-success" disabled>
+        Stock aleardy tracked
+      </button>
+      <%end%>
+    <%end%>
+  </div>
+</div>   
 <%end%>

@@ -15,6 +15,7 @@ class StocksController < ApplicationController
       end 
     else
       flash[:notice] = "You did not entered any stock symbol"
+      session[:data] = nil
       redirect_to my_portfolio_path
     end
   end 
