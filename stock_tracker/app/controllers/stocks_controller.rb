@@ -1,6 +1,5 @@
 class StocksController < ApplicationController
   def search
-    @tracked_stocks = current_user.stocks
     if params[:stock].present?
       @stock = Sampledb.find_by(ticker_symbol:params[:stock])
       if @stock.nil?

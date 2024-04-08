@@ -5,7 +5,7 @@
     <strong>Symbol</strong> : <%= @stock["ticker_symbol"] %> | <strong>Company</strong> : <%= @stock["company_name"] %> | <strong>Last-Price</strong> : <%= @stock["last_price"] %>
   </div>
   <div>
-    <% if @tracked_stocks.count > 10 %>
+    <% if @tracked_stocks.count >= 10 %>
     <button class="btn btn-success" disabled>
       Your stocks tracking limit reached you can't track it "Remove one to track it"
     </button>
@@ -19,5 +19,5 @@
       <%end%>
     <%end%>
   </div>
-</div>   
+</div>  
 <%end%>
