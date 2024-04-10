@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col" class="text-center">FirstName</th>
+      <th scope="col" class="text-center">LastName</th>
+      <th scope="col" class="text-center">Email Id</th>
+      <th scope="col" class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user_friends.each do |friend| %>
+    <tr>
+      <td scope="row" class="text-center"><%= friend.first_name %></td>
+      <td class="text-center"><%= friend.last_name %></td>
+      <td class="text-center"><%= friend.email %></td>
+      <td class="d-flex justify-content-center">
+        <div class="d-flex w-50">
+          <%= link_to "Profile","##",class:"btn btn-success me-1 px-4"%>  <%= button_to "Unfollow",remove_friend_path(friend:friend),method: :delete,data:{ turbo_confirm:"Are you sure?"},class:"btn btn-danger ms-1"%>
+        </div>
+      </td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>

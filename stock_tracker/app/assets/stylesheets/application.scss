@@ -28,3 +28,18 @@ font-size: 35px;
 .own-margin{
  margin-right:10px;
 }
+.own-pos,.own-pos-m{
+  position:relative;
+}
+.own-pos-align{
+  position:absolute;
+  top:40px;
+  width:100%;
+}
+.own-pos-mb{
+  position:absolute;
+  right:10px;
+  font-size: 50px;
+  top:-18px;
+  border:none;
+}

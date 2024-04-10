@@ -1,0 +1,20 @@
+
+<% if @friend.present? %>
+<div class=" border border-gray d-flex p-2 flex-column">
+    <% @friend.each do |friend|%>
+    <div class="d-flex justify-content-between my-1">
+      <div>
+        <strong>FullName</strong> : <%=friend["first_name"]+" "+friend["last_name"]%> | <strong>Email</strong> : <%=friend["email"]%>
+      </div>
+      <div>
+        <% if check_friend_associated_with_user(friend["id"]) %>
+        <button class="btn btn-success" disabled>You are friends</button>
+        <%else%>
+        <%= button_to "Follow",add_friend_path(friend),method: :post,class:"btn btn-primary"%>
+        <%end%>
+        
+      </div>
+    </div>
+    <%end%>
+</div>  
+<%end%>
