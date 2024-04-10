@@ -6,13 +6,14 @@
       <div>
         <strong>FullName</strong> : <%=friend["first_name"]+" "+friend["last_name"]%> | <strong>Email</strong> : <%=friend["email"]%>
       </div>
-      <div>
+      <div class="d-flex">
         <% if check_friend_associated_with_user(friend["id"]) %>
-        <button class="btn btn-success" disabled>You are friends</button>
+          <%= link_to "Profile",view_profile_path(friend:friend["id"]),class:"btn btn-success me-1"%>
+          <button class="btn btn-success" disabled>You are friends</button>
         <%else%>
-        <%= button_to "Follow",add_friend_path(friend),method: :post,class:"btn btn-primary"%>
-        <%end%>
-        
+          <%= link_to "Profile",view_profile_path(friend:friend["id"]),class:"btn btn-success me-1"%>
+          <%= button_to "Follow",add_friend_path(friend),method: :post,class:"btn btn-primary"%>
+        <%end%> 
       </div>
     </div>
     <%end%>

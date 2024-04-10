@@ -1,6 +1,9 @@
 <div class="container">
   <%= link_to "<-Back",my_friends_path,class:'btn btn-info' %>
 </div>
+<div class="container my-2">
+    <strong>FirstName</strong> : <%=@user.first_name%> | <strong>LastName</strong> : <%=@user.last_name%> | <strong>Email</strong> : <%=@user.email%>
+</div>
 <div class="container mt-3">
   <table class="table table-bordered">
     <thead>

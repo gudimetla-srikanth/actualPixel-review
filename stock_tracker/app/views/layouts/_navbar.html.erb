@@ -9,7 +9,7 @@
         <ul class="navbar-nav mr-auto">
           <% if request.path == "/my_portfolio" %>
           <li class="nav-item active">
-            <%= link_to "my_portfolio",my_portfolio_path,class:"nav-link active display-2" %>
+            <%= link_to "my_portfolio",my_portfolio_path,class:"nav-link active" %>
           </li>
           <%else%>
           <li class="nav-item active">
@@ -19,7 +19,7 @@
           <li class="nav-item">
             <% if request.path == "/my_friends" %>
           <li class="nav-item active">
-            <%= link_to "my_friends",my_friends_path,class:"nav-link display-2 active" %>
+            <%= link_to "my_friends",my_friends_path,class:"nav-link active" %>
           </li>
             <%else%>
           <li class="nav-item active">
