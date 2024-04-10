@@ -3,11 +3,13 @@ class UserStocksController < ApplicationController
     @stock = Stock.find_by(ticker:params[:ticker_symbol])
     if @stock.present?
       current_user.stocks << @stock
+      session[:data] = nil
       flash[:notice] = "Tracking the #{@stock.ticker} stock is successfull"
       redirect_to my_portfolio_path
     else 
       @stock=Stock.create(ticker:params[:ticker_symbol],name:params[:company_name],last_price:params[:last_price])
       current_user.stocks << @stock
+      session[:data] = nil
       flash[:notice] = "Tracking the #{@stock.ticker} stock is successfull"
       redirect_to my_portfolio_path
     end 

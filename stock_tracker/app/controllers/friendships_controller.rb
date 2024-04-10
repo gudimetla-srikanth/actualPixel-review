@@ -4,7 +4,9 @@ class FriendshipsController < ApplicationController
     @friend = session[:friend]
   end
   def add_new_friend
-   current_user.friends << User.find(params[:id])
+   @user_friend = User.find(params[:id])
+   current_user.friends << @user_friend
+   @user_friend.friends << current_user
    session[:friend] = nil
    flash[:notice] = "You are following him"
    redirect_to my_friends_path
@@ -20,7 +22,7 @@ class FriendshipsController < ApplicationController
 
   def search_user
     if params[:friend_string].present?
-      @user_data = User.users_with_friend_string_matching(params[:friend_string])
+      @user_data = User.users_with_friend_string_matching(params[:friend_string],current_user.id)
       session[:friend] = @user_data
       redirect_to my_friends_path
     else 
@@ -28,5 +30,10 @@ class FriendshipsController < ApplicationController
       flash[:alert] = "Enter a string to search"
       redirect_to my_friends_path
     end 
+  end
+  def viewprofile 
+    @user = User.find_by(id:params[:friend])
+    puts "+++++++++++++++++++++++++++++++#{@user.email}++++++++++++++"
+    @friend_user_stocks = @user.stocks
   end
 end

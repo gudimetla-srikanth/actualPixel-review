@@ -1,0 +1,37 @@
+<div class="container">
+  <%= link_to "<-Back",my_friends_path,class:'btn btn-info' %>
+</div>
+<div class="container mt-3">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col" class="text-center">Ticker</th>
+        <th scope="col" class="text-center">Name</th>
+        <th scope="col" class="text-center">Last Price</th>
+        <th scope="col" class="text-center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @friend_user_stocks.count >=1 %>
+      <% @friend_user_stocks.each do |stock| %>
+      <tr>
+        <th scope="row" class="text-center"><%= stock.ticker %></th>
+        <td class="text-center"><%= stock.name %></td>
+        <td class="text-center"><%= stock.last_price %></td>
+        <td class="text-center">
+        <% if check_stock_track(stock.ticker) %>
+          <button class="btn btn-success">Tracking</button>
+        <%else%>
+          <% if current_user.stocks.count >=10 %>
+            <button type="button" class="btn btn-primary" disabled>You can't add & you are not tracking it <span class="own-span">(Tracking 10 stocks already)</span></button>
+          <%else%>
+          <%= button_to "Add to your Portfolio",user_stocks_path(ticker_symbol:stock.ticker),class:'btn btn-primary' %>
+          <%end%>
+        <%end%>
+      </td>
+      </tr>
+      <%end%>
+      <%end%>
+    </tbody>
+  </table>
+</div>

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'search_user',to: 'friendships#search_user'
   post 'add_friend',to:'friendships#add_new_friend'
   delete 'remove_friend',to:'friendships#remove_existing_friend'
+  get 'view_profile',to:'friendships#viewprofile'
 end
