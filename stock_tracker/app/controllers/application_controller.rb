@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
     end 
     return false
   end
+  
   def check_stock_track(ticker)
     current_user.stocks.each do |stock|
       if stock.ticker == ticker 
