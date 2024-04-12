@@ -1,26 +1,36 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="device-container">
+  <div class="device-content">
+    <div class="box">
+      <h2 class="device-heading">LOGIN</h2>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="box">
+        <div class="box-field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class:"device-field" %>
+        </div>
+        <div class="box-field">
+          <%= f.password_field :password, autocomplete: "current-password",placeholder:"Password",class:"device-field" %>
+        </div>
+      <% if devise_mapping.rememberable? %>
+        <div class="box-field">
+          <div class="box-check">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me,class:"box-check-lable" %>
+          </div>
+        </div>
+      <% end %>
+      <div class="box-field">
+        <%= f.submit "Log in",class:"device-submit"%>
+      </div>
+    </div>
+    <% end %>
+    <div class="box">
+      <div class="box-field">
+        <div class="device-shared-links">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+    
