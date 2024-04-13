@@ -1,3 +1,15 @@
-<div>
-  this is nav bar
+<div class="app-navbar">
+  <div class="nav-logo">
+    <%= link_to "MyBlogs",blogs_path ,class:"nav-logo-name"%>
+  </div>
+  <div class="nav-form">
+    <%=form_tag  search_path,method: :get do %>
+      <%=text_field_tag :search,"Enter Search string",class:"nav-input" %>
+      <%=submit_tag "Search",class:"nav-submit" %>
+    <%end%>
+  </div>
+  <div class="nav-links">
+   <%= link_to "New blog",new_blog_path,class:"nav-btn nav-new-blog"%>
+    <%= button_to "Sign out",destroy_user_session_path,method: :delete,data:{ turbo_confirm:"are you sure?you want to logout"},class:"nav-btn nav-logout"%>
+  </div>
 </div>

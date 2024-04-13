@@ -1,20 +1,26 @@
-<h1>Blogs</h1>
-<div>
-  <% @blogs.each do |blog| %>
-    <div>
-      <div>Title : <%= blog.title%></div>
-      <div>Description : <%= blog.description%></div>
-      <div>
-        <div>
-          <%= link_to "edit",edit_blog_path(blog)%>
-          <%= link_to "show",blog_path(blog) %>
-          <%= button_to "delete",blog_path(blog),method: :delete,data:{ turbo_confirm:"Are you sure?you want to delete?"}%>
+<div class="index">
+  <div class="index-content">
+    <h1>Blogs</h1>
+    <%= will_paginate @blogs,class:"index-paginate" %>
+    <% @blogs.each do |blog| %>
+      <div class="index-box">
+        <div class="index-data">
+          <h2><%= blog.title%></h2>
+          <div class="index-desc"><%= truncate(blog.description,length:30)%></div>
+          <div class="index-links">
+            <%= link_to "Edit",edit_blog_path(blog),class:"index-btns index-edit"%>
+            <%= link_to "Show",blog_path(blog),class:"index-btns index-show" %>
+            <%= button_to "Remove",blog_path(blog),method: :delete,data:{ turbo_confirm:"Are you sure?you want to delete?"},class:"index-btns index-delete"%>
+          </div>
+        </div>
+        <div class="index-image">
+            <%if blog.image.attached?%>
+              <%= image_tag blog.image,class:"index-img"%>
+            <%end%>
         </div>
       </div>
-    </div>
-    <br>
-  <%end%>
+    <%end%>
+  </div>
 </div>
 
-<h2><%= link_to "New blog",new_blog_path%></h2>
-<h2><%= button_to "Sign out",destroy_user_session_path,method: :delete,data:{ turbo_confirm:"are you sure?you want to logout"}%></h2>
+

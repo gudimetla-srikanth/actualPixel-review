@@ -11,7 +11,9 @@
   </head>
 
   <body class="body">
-    <%=render "layouts/navbar" %>
+    <% if current_user %>
+      <%=render "layouts/navbar" %>
+    <%end%>
       <% if notice || alert %>
           <div id="err" class="errors">
             <div class="error-block">

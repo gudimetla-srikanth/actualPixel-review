@@ -1,0 +1,63 @@
+.app-navbar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(221, 234, 234);
+  padding:20px;
+}
+.nav-form{
+  width:40%;
+}
+.nav-input{
+  width:80%;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  box-sizing: border-box;
+  border:none;
+}
+.nav-submit{
+  width:19%;
+  padding-top:10px;
+  padding-bottom:10px;
+  box-sizing: border-box;
+  border:none;
+  background-color: green;
+  color:white;
+  font-weight: 700;
+}
+.nav-links{
+  display:flex;
+  width:50%;
+  justify-content: right;
+  align-items: center;
+}
+.nav-btn{
+  box-sizing: border-box;
+  color:red;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+  padding-right:20px;
+  border:none;
+  color:white;
+  font-weight: 800;
+}
+.nav-new-blog{
+  text-decoration: none;
+  background-color: blue;
+  font-weight: 800;
+  margin-right:10px;
+}
+.nav-logout{
+  background-color: red;
+}
+.nav-logo{
+  font-family: cursive;
+  font-weight: 900;
+  font-size: 30px;
+  color:blue;
+}
+.nav-logo-name{
+  text-decoration: none;
+}

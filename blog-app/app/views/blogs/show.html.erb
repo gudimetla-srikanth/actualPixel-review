@@ -1,16 +1,23 @@
-<div>
-  <div>
-    <h2>Title : <%= @blog.title%></h2>
-    <h3>Description : <%= @blog.description%></h3>
-    <div>
-      <%if @blog.image.attached?%>
-      <%= image_tag @blog.image,class:"image-size"%>
-     <%end%>
+
+<div class="show-container">
+  <div class="show">
+    <div class="show-block">
+      <div class="show-title">
+        <%= @blog.title%>
+      </div>
+      <div class="show-desc">
+        <%= @blog.description%>
+      </div>
+      <div class="show-links">
+        <%= link_to "Edit",edit_blog_path( @blog),class:"show-link show-edit"%>
+        <%= button_to "Remove",blog_path( @blog),method: :delete,data:{ turbo_confirm:"Are you sure?you want to delete?"},class:"show-link show-remove"%>
+      </div>
     </div>
-    <div>
-      <%= link_to "edit",edit_blog_path( @blog),class:'action'%>
-      <%= button_to "delete",blog_path( @blog),method: :delete,data:{ turbo_confirm:"Are you sure?you want to delete?"},class:'action'%>
-      <%= link_to "Back to Home",blogs_path,class:'action' %>
+    <div class="show-image">
+      <%if @blog.image.attached?%>
+        <%= image_tag @blog.image,class:"show-img"%>
+      <%end%>
     </div>
   </div>
 </div>
+
