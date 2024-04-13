@@ -7,25 +7,47 @@
   width:100%;
 }
 .error-block{
-  padding:10px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:20px;
+  padding-bottom:20px;
   display:flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   width:80%;
   min-height:40px;
-}
-.signup-errors{
-  color:red;
-  position:absolute;
-  top:0px;
-  width:100%;
-  left:0px;
-  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .notice{
   color:green;
 }
 .alert{
   color:red;
+}
+.signup-errors{
+  position:absolute;
+  top:20px;
+  width:100%;
+  left:0px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-err-container{
+  width:80%;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right:10px;
+}
+.signup-err-list{
+  margin-left:30px;
+  box-sizing: border-box;
+  color:red;
+  margin-top:5px;
 }

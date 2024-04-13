@@ -14,19 +14,7 @@
     <% if current_user %>
       <%=render "layouts/navbar" %>
     <%end%>
-      <% if notice || alert %>
-          <div id="err" class="errors">
-            <div class="error-block">
-              <div>
-                <p class="notice"><%= notice %></p>
-                <p class="alert"><%= alert %></p>
-              </div>
-              <div>
-                <button id="close">&#10060</button>
-              </div>
-            </div>
-          </div>
-      <%end%>
+    <%=render "layouts/errors" %>
     <%= yield %>
   </body>
 </html>
