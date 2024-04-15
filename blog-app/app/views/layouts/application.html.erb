@@ -16,5 +16,8 @@
     <%end%>
     <%=render "layouts/errors" %>
     <%= yield %>
+    <% if current_user %>
+      <%=render "layouts/footer" %>
+    <%end%>
   </body>
 </html>

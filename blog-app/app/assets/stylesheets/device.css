@@ -8,7 +8,7 @@
   height:70%;
   width:30%;
   background-color: white;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .box{
   margin-top:10px;
@@ -37,7 +37,7 @@
   width:80%;
   padding-top:10px;
   padding-bottom:10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   border:none;
   padding-left:10px;
   outline:none;
@@ -84,7 +84,7 @@
   width:30%;
   padding-left:20px;
   padding-right:20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .signup-container h2{
  text-align: center;
@@ -102,7 +102,7 @@
   padding-bottom:10px;
   padding-left:10px;
   width:100%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   outline:none;
   border:none;
   color:black;
