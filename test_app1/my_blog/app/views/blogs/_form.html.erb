@@ -1,0 +1,12 @@
+<div class="blog-form">
+  <div class="blog-content">
+    <%= form_with model: @blog do |f| %>
+    <div class="blog-fields">
+      <div class="blog-item"><%=f.text_field :title,placeholder:"Enter title here",class:"blog-input-field blog-cursor" %></div>
+      <div class="blog-item"><%=f.text_area :description,placeholder:"Enter description here",class:"blog-input-field blog-form-area blog-cursor" %></div>
+      <div class="blog-item"><%=f.file_field :image,class:"blog-file"%></div>
+      <div class="blog-item"><%=f.submit class:"blog-input-field blog-form-btn blog-cursor"%></div>
+    </div>
+    <%end%>
+  </div>
+</div>
