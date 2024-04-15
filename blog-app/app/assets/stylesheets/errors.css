@@ -5,6 +5,7 @@
   align-items: center;
   top:20px;
   width:100%;
+  background-color: white;
 }
 .error-block{
   padding-left:10px;
@@ -33,6 +34,8 @@
   display:flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  z-index:100;
 }
 .signup-err-container{
   width:80%;

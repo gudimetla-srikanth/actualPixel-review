@@ -18,6 +18,7 @@
   margin-bottom:25px;
   display:flex;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position:relative;
 }
 .index-data{
   width:50%;
@@ -70,6 +71,7 @@ padding-left:40px;
  width:150px;
  height:150px;
   background-position: cover;
+  cursor: pointer;
 }
 .index-paginate{
   text-align: center;
@@ -102,3 +104,19 @@ padding-left:40px;
     color: black; }
     .apple_pagination a:hover, .apple_pagination a:focus {
       text-decoration: underline; }
+.index-creator{
+  position:absolute;
+  bottom:0px;
+  left:10px;
+}
+.index-creator span{
+font-style: italic;
+}
+.by{
+  margin-right:5px;
+}
+.by-name{
+  font-weight: 900;
+  color:rgb(116, 24, 255);
+  font-size: 20px;
+}

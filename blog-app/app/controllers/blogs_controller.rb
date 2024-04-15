@@ -10,6 +10,7 @@ class BlogsController < ApplicationController
   end
   def create 
     @blog = Blog.new(params.require(:blog).permit(:title,:description,:image))
+    @blog.user = current_user
     if @blog.save 
       redirect_to @blog
     else 

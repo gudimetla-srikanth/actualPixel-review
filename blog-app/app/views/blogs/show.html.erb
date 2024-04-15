@@ -1,6 +1,11 @@
 
 <div class="show-container">
   <div class="show">
+    <h1>
+      <% if @blog.user %>
+      <span class="show-span1">by</span><span class="show-span2"><%= @blog.user.first_name+" "+@blog.user.last_name %></span>
+      <%end%>
+    </h1>
     <div class="show-block">
       <div class="show-title">
         <%= @blog.title%>
