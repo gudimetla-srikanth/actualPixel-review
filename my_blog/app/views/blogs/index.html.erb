@@ -1,16 +1,23 @@
-
-<% if @searched_blogs.present? %>
 <div class="index">
   <div class="index-content">
-    <% @searched_blogs.each do |blog| %>
+    <h1>Blogs</h1>
+    <div class="index-paginate">
+      <%= will_paginate @blogs,class:"digg_pagination"%>
+    </div>
+    <% @blogs.each do |blog| %>
       <div class="index-box">
         <div class="index-data">
-          <h2><%= blog.title%></h2>
+            <h2><%= blog.title%></h2>
           <div class="index-desc"><%= truncate(blog.description,length:30)%></div>
           <div class="index-links">
             <%= link_to "Edit",edit_blog_path(blog),class:"index-btns index-edit"%>
             <%= link_to "Show",blog_path(blog),class:"index-btns index-show" %>
             <%= button_to "Remove",blog_path(blog),method: :delete,data:{ turbo_confirm:"Are you sure?you want to delete?"},class:"index-btns index-delete"%>
+          </div>
+          <div class="index-creator">
+            <% if blog.user %>
+            <span><span class="by">by</span><span class="by-name"><%= blog.user.first_name+" "+blog.user.last_name %></span></span>
+            <%end%>
           </div>
         </div>
         <div class="index-image">
@@ -22,4 +29,5 @@
     <%end%>
   </div>
 </div>
-<%end%>
+
+

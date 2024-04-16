@@ -6,7 +6,6 @@
   top:20px;
   width:100%;
   background-color: white;
-  z-index: 10;
 }
 .error-block{
   padding-left:10px;
@@ -19,6 +18,7 @@
   background-color: white;
   width:80%;
   min-height:40px;
+  z-index: 10;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .notice{
@@ -36,7 +36,6 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  z-index:100;
 }
 .signup-err-container{
   width:80%;
@@ -48,6 +47,7 @@
   justify-content: space-between;
   align-items: center;
   padding-right:10px;
+  z-index: 10;
 }
 .signup-err-list{
   margin-left:30px;

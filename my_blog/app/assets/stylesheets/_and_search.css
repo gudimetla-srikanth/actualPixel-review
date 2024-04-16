@@ -21,7 +21,7 @@
   position:relative;
 }
 .index-data{
-  width:50%;
+ flex:1;
 }
 .index-data h2,.index-desc{
   padding-top:10px;
@@ -29,7 +29,7 @@
   padding-left:10px;
 }
 .index-image{
-  width:50%;
+  flex:1;
 }
 .index-links{
   display:flex;
@@ -73,37 +73,6 @@ padding-left:40px;
   background-position: cover;
   cursor: pointer;
 }
-.index-paginate{
-  text-align: center;
-}
-
-.apple_pagination {
-  background: #f1f1f1;
-  border: 1px solid #e5e5e5;
-  text-align: center;
-  padding: 1em;
-  cursor: default; }
-  .apple_pagination a, .apple_pagination span {
-    padding: 0.2em 0.3em; }
-  .apple_pagination .disabled {
-    color: #aaaaaa; }
-  .apple_pagination .current {
-    font-style: normal;
-    font-weight: bold;
-    background-color: #bebebe;
-    display: inline-block;
-    width: 1.4em;
-    height: 1.4em;
-    line-height: 1.5;
-    -moz-border-radius: 1em;
-    -webkit-border-radius: 1em;
-    border-radius: 1em;
-    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
-  .apple_pagination a {
-    text-decoration: none;
-    color: black; }
-    .apple_pagination a:hover, .apple_pagination a:focus {
-      text-decoration: underline; }
 .index-creator{
   position:absolute;
   bottom:0px;
@@ -119,4 +88,8 @@ font-style: italic;
   font-weight: 900;
   color:rgb(95, 96, 89);
   font-size: 20px;
+}
+.index-paginate{
+  display:flex;
+  justify-content: center;
 }
