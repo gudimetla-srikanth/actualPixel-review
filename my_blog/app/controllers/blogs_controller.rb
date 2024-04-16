@@ -1,9 +1,9 @@
 class BlogsController < ApplicationController 
   def index
-    @blogs = Blog.paginate(page: params[:page], per_page: 6)
+    @blogs = current_user.blogs.paginate(page: params[:page], per_page: 6)
   end
   def search
-    @searched_blogs = Blog.where("title like ?","%#{params[:search]}%").paginate(page: params[:page], per_page: 6) if params[:search].present? 
+    @searched_blogs =current_user.blogs.where("title like ?","%#{params[:search]}%").paginate(page: params[:page], per_page: 6) if params[:search].present? 
   end
   def new
     @blog = Blog.new 

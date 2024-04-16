@@ -7,7 +7,7 @@
     <% @blogs.each do |blog| %>
       <div class="index-box">
         <div class="index-data">
-            <h2><%= blog.title%></h2>
+            <h2><%= truncate(blog.title,length:20)%></h2>
           <div class="index-desc"><%= truncate(blog.description,length:30)%></div>
           <div class="index-links">
             <%= link_to "Edit",edit_blog_path(blog),class:"index-btns index-edit"%>

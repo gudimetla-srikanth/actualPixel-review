@@ -27,9 +27,6 @@
   font-size: 15px;
 }
 .blog-form-btn{
-  background-color: blue;
-  color:white !important;
-  font-weight: 900;
   font-size: 20px;
   padding-left:0px;
 }
@@ -46,4 +43,29 @@
   text-align: center;
   margin-top:20px;
   font-family: cursive;
+}
+.blog-file{
+  color:black;
+  font-weight: 700;
+}
+input::file-selector-button{
+  color:white;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+  padding-right:20px;
+  border:none;
+  background-image: linear-gradient(to bottom right,red,yellow);
+}
+input::file-selector-button:hover{
+  background-color: white;
+  color:black;
+  font-weight: 900;
+  background-image: linear-gradient(to bottom right,rgb(8, 55, 112),rgb(255, 24, 170));
+}
+.blog-edit{
+  background-color: yellow;
+}
+.blog-create{
+  background-color: green;
 }
