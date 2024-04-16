@@ -3,17 +3,25 @@
     <h2>SIGNUP</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <div class="signup-input-block">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class:"signup-field"%>
+        <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name",placeholder:"first name",class:"signup-field"%>
         <% if resource.errors.any? %>
-        <p class="resource-err"><%= resource.errors[:email].first %></p>
+        <p class="resource-err">first name <%= resource.errors[:first_name].first %></p>
         <%end%>
-        <%= f.password_field :password, autocomplete: "new-password",placeholder:"Password",class:"signup-field" %>
+        <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name",placeholder:"fast name",class:"signup-field"%>
         <% if resource.errors.any? %>
-        <p class="resource-err"><%= resource.errors[:password].first %></p>
+        <p class="resource-err">last name <%= resource.errors[:last_name].first %></p>
         <%end%>
-        <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"Confirm Password",class:"signup-field" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"email",class:"signup-field"%>
         <% if resource.errors.any? %>
-        <p class="resource-err"><%= resource.errors[:password].first %></p>
+        <p class="resource-err">email <%= resource.errors[:email].first %></p>
+        <%end%>
+        <%= f.password_field :password, autocomplete: "new-password",placeholder:"password",class:"signup-field" %>
+        <%if resource.errors.any? %>
+        <p class="resource-err">password <%= resource.errors[:password].first %></p>
+        <%end%>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"confirm password",class:"signup-field" %>
+        <% if resource.errors.any? %>
+        <p class="resource-err">confirmation <%= resource.errors[:password_confirmation].first%></p>
         <%end%>
         <%= f.submit "Sign up",class:"signup-field signup-btn"%>
       <% end %>

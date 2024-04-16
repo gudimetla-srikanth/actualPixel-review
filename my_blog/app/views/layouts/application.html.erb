@@ -14,7 +14,9 @@
     <% if current_user %>
       <%=render "layouts/navbar" %>
     <%end%>
-    <%=render "layouts/errors" %>
+    <% if !(request.path == "/users/sign_in") %>
+      <%=render "layouts/errors" %>
+    <%end%>
     <%= yield %>
 </body>
 </html>
