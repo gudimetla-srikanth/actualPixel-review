@@ -2,11 +2,19 @@
   <div class="signup-container">
     <h2>SIGNUP</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource%>
       <div class="signup-input-block">
         <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class:"signup-field"%>
+        <% if resource.errors.any? %>
+        <p class="resource-err"><%= resource.errors[:email].first %></p>
+        <%end%>
         <%= f.password_field :password, autocomplete: "new-password",placeholder:"Password",class:"signup-field" %>
+        <% if resource.errors.any? %>
+        <p class="resource-err"><%= resource.errors[:password].first %></p>
+        <%end%>
         <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder:"Confirm Password",class:"signup-field" %>
+        <% if resource.errors.any? %>
+        <p class="resource-err"><%= resource.errors[:password].first %></p>
+        <%end%>
         <%= f.submit "Sign up",class:"signup-field signup-btn"%>
       <% end %>
       </div>
