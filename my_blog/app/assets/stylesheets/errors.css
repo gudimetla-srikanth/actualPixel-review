@@ -20,6 +20,7 @@
   min-height:40px;
   z-index: 10;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
 }
 .notice{
   color:green;
@@ -52,6 +53,7 @@
   align-items: center;
   padding-right:10px;
   z-index: 10;
+  border-radius: 5px;
 }
 .signup-err-list{
   margin-left:30px;

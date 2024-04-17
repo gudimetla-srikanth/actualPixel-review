@@ -56,15 +56,15 @@ input::file-selector-button{
   padding-right:20px;
   border:none;
   background-image: linear-gradient(to bottom right,red,yellow);
+  border-radius: 5px;
 }
 .blog-edit{
   background-color: yellow;
+  border-radius: 5px;
 }
 .blog-create{
   background-color: green;
   color:white;
   font-style: italic;
-}
-.blog-my-input::placeholder{
-  color:blue;
+  border-radius: 5px;
 }

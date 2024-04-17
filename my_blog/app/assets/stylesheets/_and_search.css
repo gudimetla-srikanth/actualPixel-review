@@ -13,12 +13,13 @@
 }
 .index-box{
   width:100%;
-  height:200px;
+  height:250px;
   margin-top:15px;
   margin-bottom:25px;
   display:flex;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position:relative;
+  border-radius: 5px;
 }
 .index-data{
  flex:1;
@@ -48,6 +49,7 @@
   color:white;
   font-weight: 900;
   cursor: pointer;
+  border-radius: 5px;
 }
 .index-edit{
 background-color: yellow;

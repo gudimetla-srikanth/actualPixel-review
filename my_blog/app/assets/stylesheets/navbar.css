@@ -37,6 +37,7 @@
   font-weight: 700;
   cursor: pointer;
   border:1px solid green;
+  border-radius: 5px;
 }
 .nav-links{
   display:flex;
@@ -54,16 +55,19 @@
   border:none;
   color:white;
   font-weight: 800;
+  border-radius: 5px;
 }
 .nav-new-blog{
   text-decoration: none;
   background-color: blue;
   font-weight: 900;
   margin-right:10px;
+  border-radius: 5px;
 }
 .nav-logout{
   background-color: red;
   cursor: pointer;
+  border-radius: 5px;
 }
 .nav-logo{
   font-family: cursive;

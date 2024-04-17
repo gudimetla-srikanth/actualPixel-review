@@ -47,10 +47,12 @@
   text-decoration: none;
   color:black;
   font-weight: 900;
+  border-radius: 5px;
 }
 .show-remove{
   border:none;
   color:black;
   background-color: red;
   font-weight: 600;
+  border-radius: 5px;
 }
