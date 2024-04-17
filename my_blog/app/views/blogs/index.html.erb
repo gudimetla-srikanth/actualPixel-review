@@ -7,7 +7,7 @@
     <% @blogs.each do |blog| %>
       <div class="index-box">
         <div class="index-data">
-            <h2><%= truncate(blog.title,length:20)%></h2>
+            <h2><%= truncate(blog.title,length:30)%></h2>
           <div class="index-desc"><%= truncate(blog.description,length:30)%></div>
           <div class="index-links">
             <%= link_to "Edit",edit_blog_path(blog),class:"index-btns index-edit"%>
@@ -16,7 +16,7 @@
           </div>
           <div class="index-creator">
             <% if blog.user %>
-            <span><span class="by">by</span><span class="by-name"><%= blog.user.first_name+" "+blog.user.last_name %></span></span>
+            <span><span class="by">by</span><span class="by-name"><%= blog.user.first_name if !blog.user.first_name.nil? %> <%=blog.user.last_name if !blog.user.last_name.nil? %></span></span>
             <%end%>
           </div>
         </div>

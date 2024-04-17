@@ -3,7 +3,7 @@
   <div class="show">
     <h1>
       <% if @blog.user %>
-      <span class="show-span1">by</span><span class="show-span2"><%= @blog.user.first_name+" "+@blog.user.last_name %></span>
+        <span class="show-span1">by</span><span class="show-span2"><%= @blog.user.first_name if !@blog.user.first_name.nil? %> <%=@blog.user.last_name if !@blog.user.last_name.nil? %></span>
       <%end%>
     </h1>
     <div class="show-block">

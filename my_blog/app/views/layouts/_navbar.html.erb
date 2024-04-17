@@ -9,7 +9,7 @@
     <%end%>
   </div>
   <div class="nav-links">
-   <%= link_to "New blog",new_blog_path,class:"nav-btn nav-new-blog"%>
-    <%= button_to "Sign out",destroy_user_session_path,method: :delete,data:{ turbo_confirm:"are you sure?you want to logout"},class:"nav-btn nav-logout"%>
+   <%= link_to "Create Blog",new_blog_path,class:"nav-btn nav-new-blog"%>
+    <%= button_to "Logout",destroy_user_session_path,method: :delete,data:{ turbo_confirm:"are you sure?you want to logout"},class:"nav-btn nav-logout"%>
   </div>
 </div>

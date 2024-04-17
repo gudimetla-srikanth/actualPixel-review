@@ -10,7 +10,7 @@
   z-index:6;
 }
 .nav-form{
-  width:40%;
+  flex:1;
 }
 .nav-input{
   width:80%;
@@ -40,7 +40,7 @@
 }
 .nav-links{
   display:flex;
-  width:50%;
+  flex:1;
   justify-content: right;
   align-items: center;
 }
@@ -58,7 +58,7 @@
 .nav-new-blog{
   text-decoration: none;
   background-color: blue;
-  font-weight: 800;
+  font-weight: 900;
   margin-right:10px;
 }
 .nav-logout{
@@ -70,6 +70,7 @@
   font-weight: 900;
   font-size: 30px;
   color:blue;
+  flex:1;
 }
 .nav-logo-name{
   text-decoration: none;

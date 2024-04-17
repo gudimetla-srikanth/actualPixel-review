@@ -8,26 +8,30 @@ class BlogsController < ApplicationController
   def new
     @blog = Blog.new 
   end
-  def create 
+  def create
     @blog = Blog.new(params.require(:blog).permit(:title,:description,:image))
     @blog.user = current_user
     if @blog.save 
+      flash[:notice] = 'Blog has been saved successfully'
       redirect_to @blog
     else 
-      flash[:notice] = 'Blog is not saved'
+      flash.now[:alert] = 'Blog is not saved'
       render :new,status: :unprocessable_entity
     end
   end
+
   def update
     @blog = Blog.find(params[:id])
     @blog.user = current_user
     if @blog.update(params.require(:blog).permit(:title,:description,:image))
+      flash[:notice] = 'Blog has been updated successfully'
       redirect_to @blog
     else
-      flash[:notice] = 'Blog is not updated'
+      flash.now[:alert] = 'Blog is not updated, fields missing'
       render :edit,status: :unprocessable_entity
     end
   end
+
   def edit
     @blog = Blog.find(params[:id]) 
   end
