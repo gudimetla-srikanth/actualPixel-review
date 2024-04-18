@@ -72,10 +72,13 @@
 .nav-logo{
   font-family: cursive;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 50px;
   color:blue;
   flex:1;
 }
 .nav-logo-name{
   text-decoration: none;
+  background-image: linear-gradient(to right,white,red,yellow,green,blue,black);
+  background-clip: text;
+  color:transparent;
 }
