@@ -3,6 +3,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
+  after_action :send_method,only: [:create]
 
   # GET /resource/sign_up
   # def new
@@ -12,9 +13,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-    if current_user
-      UserMailer.welcome_mail.deliver_now
-    end
   end
 
   # GET /resource/edit
@@ -62,4 +60,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  def send_method 
+    if current_user
+      puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    puts current_user.first_name
+    puts current_user.last_name
+    puts current_user.email
+    puts "=========================================================================="
+    end
+   UserMailer.with(user: current_user).welcome_mail.deliver_now if current_user
+  end
 end

@@ -1,5 +1,7 @@
-<h1>User#welcome_mail</h1>
 
-<p>
-  <%= @greeting %>, find me in app/views/user_mailer/welcome_mail.html.erb
-</p>
+<h2>welcome to our blog application</h2>
+<p>Thanks for signing up with us</p>
+<p>Your details that our database has : </p>
+<p>Name : <%=@user.first_name%> <%=@user.last_name %></p>
+<p>Email : <%=@user.email%></p>
+<p>password is encrypted in our database for security reasons</p>
