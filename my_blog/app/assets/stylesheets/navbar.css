@@ -72,17 +72,16 @@
   font-family: cursive;
   font-weight: 900;
   font-size: 30px;
-  color:blue;
   flex:1;
   position:relative;
 }
 .nav-logo-name{
   text-decoration: none;
-  background-image: linear-gradient(to right,white,red,yellow,green,blue,black);
-  background-clip: text;
-  color:transparent;
-  font-size: 50px;
+  color:rgb(26, 10, 255);
 }
 .nav-bbdu{
   background-color: rgb(239, 255, 18);
+}
+.nav-bbeu{
+  background-color: rgb(189, 8, 162);
 }

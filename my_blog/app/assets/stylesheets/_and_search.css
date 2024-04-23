@@ -20,6 +20,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position:relative;
   border-radius: 5px;
+  padding:10px;
 }
 .index-data{
  flex:1;
@@ -77,8 +78,8 @@ padding-left:40px;
 }
 .index-creator{
   position:absolute;
-  bottom:0px;
-  left:10px;
+  bottom:10px;
+  left:20px;
 }
 .index-creator span{
 font-style: italic;
@@ -88,10 +89,15 @@ font-style: italic;
 }
 .by-name{
   font-weight: 900;
-  color:rgb(95, 96, 89);
+  color:rgb(10, 8, 8);
   font-size: 20px;
 }
 .index-paginate{
   display:flex;
   justify-content: center;
+}
+h4{
+  text-align: center;
+  padding-top:20px;
+  padding-bottom:20px;
 }

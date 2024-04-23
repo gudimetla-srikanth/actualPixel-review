@@ -49,6 +49,11 @@ class BlogsController < ApplicationController
   end
   def bulkdata
   end
+  def export_csv
+    respond_to do |format|
+      format.csv { send_data Blog.generate_csv,filename: "(#{Time.now})BlogsCsvData.csv",type: 'text/csv'}
+    end
+  end
   def import
     if params[:file].present?
       if params[:file].content_type == "text/csv"

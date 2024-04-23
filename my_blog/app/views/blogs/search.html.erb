@@ -1,8 +1,9 @@
 
 <% if @searched_blogs.present? %>
 <div class="index">
-  <div class="index-content">
-    <%= will_paginate @searched_blogs,class:"index-paginate" %>
+  <div class="index-content"> 
+    <h4>Blogs that are matching to search results are below listed</h4>
+      <%= will_paginate @searched_blogs,class:"index-paginate digg_pagination" %>
     <% @searched_blogs.each do |blog| %>
       <div class="index-box">
         <div class="index-data">

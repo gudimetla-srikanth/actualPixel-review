@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'search',to:'blogs#search'
   get 'bulkdata',to:"blogs#bulkdata"
   post 'import',to:"blogs#import"
+  get 'export',to:"blogs#export_csv"
 end

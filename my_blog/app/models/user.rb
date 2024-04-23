@@ -14,4 +14,5 @@ class User < ApplicationRecord
   validates :password_confirmation,presence: true
   validates :first_name,presence: true,length:{minimum:3}
   validates :last_name,presence: true,length:{minimum:2}
+
 end
