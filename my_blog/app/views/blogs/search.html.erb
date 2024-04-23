@@ -13,6 +13,11 @@
             <%= link_to "Show",blog_path(blog),class:"index-btns index-show" %>
             <%= button_to "Remove",blog_path(blog),method: :delete,data:{ turbo_confirm:"Are you sure?you want to delete?"},class:"index-btns index-delete"%>
           </div>
+          <div class="index-creator">
+            <% if blog.user %>
+            <span><span class="by">by</span><span class="by-name"><%= blog.user.first_name if !blog.user.first_name.nil? %> <%=blog.user.last_name if !blog.user.last_name.nil? %></span></span>
+            <%end%>
+          </div>
         </div>
         <div class="index-image">
             <%if blog.image.attached?%>

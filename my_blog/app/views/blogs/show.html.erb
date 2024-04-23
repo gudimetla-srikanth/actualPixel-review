@@ -17,6 +17,7 @@
         <%= link_to "Edit",edit_blog_path( @blog),class:"show-link show-edit"%>
         <%= button_to "Remove",blog_path( @blog),method: :delete,data:{ turbo_confirm:"Are you sure?you want to delete?"},class:"show-link show-remove"%>
       </div>
+      
     </div>
     <div class="show-image">
       <%if @blog.image.attached?%>

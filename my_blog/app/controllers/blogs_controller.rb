@@ -47,4 +47,24 @@ class BlogsController < ApplicationController
       redirect_to @blog
     end
   end
+  def bulkdata
+  end
+  def import
+    if params[:file].present?
+      if params[:file].content_type == "text/csv"
+        file = File.open(params[:file])
+        csv = CSV.parse(file,headers: true,col_sep:",")
+        csv.each do |row|
+          Blog.create(title:row[0],description:row[1],user:current_user)
+        end
+        redirect_to root_path
+      else 
+        flash[:alert] = "only '.csv' type is valid"
+        redirect_to root_path
+      end
+    else 
+      flash[:alert] = "Choosing a file is required"
+      redirect_to root_path
+    end
+  end
 end
