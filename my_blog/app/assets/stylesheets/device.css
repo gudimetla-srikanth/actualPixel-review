@@ -51,10 +51,9 @@
   padding-top:10px;
   padding-bottom:10px;
   color:white;
-  background-color: rgb(6, 114, 51);
+  background-color: blue;
   border:none;
   font-size: 15px;
-  font-weight: 900;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -117,8 +116,14 @@
 }
 .signup-btn{
   background-color: blue;
-  font-weight: 900;
   color:white;
   cursor: pointer;
   border-radius: 5px;
+}
+.forgot-content{
+  height:max-content;
+  padding-bottom:10px;
+}
+.password-edit{
+  text-align:center;
 }
