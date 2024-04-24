@@ -80,6 +80,8 @@ input::file-selector-button{
   display:flex;
   justify-content: center;
   align-items: center;
+  border:1px solid gray;
+  height:300px;
 }
 
 .bulk-fields{
@@ -97,5 +99,4 @@ input::file-selector-button{
   padding-right:20px;
   border-radius: 5px;
   color:white;
-
 }

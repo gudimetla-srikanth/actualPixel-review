@@ -7,6 +7,7 @@
   background-color: white;
   padding:20px;
   z-index:6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .nav-form{
   flex:1;
@@ -79,9 +80,43 @@
   text-decoration: none;
   color:rgb(26, 10, 255);
 }
-.nav-bbdu{
-  background-color: rgb(239, 255, 18);
+.dropbtn {
+  background-color: #dbff0c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
 }
-.nav-bbeu{
-  background-color: rgb(189, 8, 162);
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .nav-link-csv {
+  color: black;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content .nav-link-csv:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+  background-color: #06670a;
 }

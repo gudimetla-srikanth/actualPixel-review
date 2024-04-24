@@ -9,9 +9,14 @@
     <%end%>
   </div>
   <div class="nav-links">
-    <%= link_to "ICF",bulkdata_path,class:"nav-btn nav-new-blog nav-bbeu"%>
-    <%= link_to "ECF",export_path(format: :csv),class:"nav-btn nav-new-blog nav-bbdu"%>
-   <%= link_to "Create Blog",new_blog_path,class:"nav-btn nav-new-blog"%>
+    <div class="dropdown">
+      <button class="dropbtn nav-btn">Links</button>
+      <div class="dropdown-content">
+        <%= link_to "Import CSV file",bulkdata_path,class:"nav-link-csv"%>
+        <%= link_to "Export CSV file",export_path(format: :csv),class:"nav-link-csv"%>
+        <%= link_to "Create New Blog",new_blog_path,class:"nav-link-csv"%>
+      </div>
+    </div>
     <%= button_to "Sign Out",destroy_user_session_path,method: :delete,data:{ turbo_confirm:"are you sure?you want to logout"},class:"nav-btn nav-logout"%>
   </div>
 </div>

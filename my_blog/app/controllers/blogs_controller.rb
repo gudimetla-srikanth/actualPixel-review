@@ -57,10 +57,19 @@ class BlogsController < ApplicationController
   def import
     if params[:file].present?
       if params[:file].content_type == "text/csv"
+        @duplicate_val=0
         file = File.open(params[:file])
         csv = CSV.parse(file,headers: true,col_sep:",")
         csv.each do |row|
-          Blog.create(title:row[0],description:row[1],user:current_user)
+          @current_obj = Blog.find_by(title:row[0])
+          if @current_obj.nil?
+            Blog.create(title:row[0],description:row[1],user:current_user)
+          else
+            @duplicate_val+=1
+          end
+        end
+        if @duplicate_val>0
+          flash[:alert] = "Found #{@duplicate_val} duplicate records but not saved in database"
         end
         redirect_to root_path
       else 
