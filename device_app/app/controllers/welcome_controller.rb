@@ -6,11 +6,13 @@ class WelcomeController < ApplicationController
   end
   def import
     if params[:file].present?
-      file = File.open(params[:file])
-      csv = CSV.parse(file,headers: true,col_sep:",")
-      puts "======================================================="
-      csv.each {|row| puts row.to_hash}
-      puts "+++++++++++++++++++++++++++++++++++++++++++++++++++"
+      file = params[:file].read
+      csv = CSV.parse(file,headers: true)
+      puts "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+      csv.each do |row|
+        puts row["title"]
+      end
+      puts "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
     end
     
     redirect_to root_path

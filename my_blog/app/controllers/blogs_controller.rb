@@ -58,12 +58,19 @@ class BlogsController < ApplicationController
     if params[:file].present?
       if params[:file].content_type == "text/csv"
         @duplicate_val=0
-        file = File.open(params[:file])
-        csv = CSV.parse(file,headers: true,col_sep:",")
+        file = params[:file].read
+        csv = CSV.parse(file,headers: true)
+        expected_values = ['title','description']
+        csv_headers = csv.headers.map(&:strip)
+        if expected_values != csv_headers
+          flash[:alert] = "The file does not have header values so it is not valid"
+          return redirect_to root_path
+        end
         csv.each do |row|
-          @current_obj = Blog.find_by(title:row[0])
+          puts row["title"]
+          @current_obj = Blog.find_by(title:row["title"])
           if @current_obj.nil?
-            Blog.create(title:row[0],description:row[1],user:current_user)
+            Blog.create(title:row["title"],description:row['description'],user:current_user)
           else
             @duplicate_val+=1
           end
@@ -81,4 +88,5 @@ class BlogsController < ApplicationController
       redirect_to root_path
     end
   end
+
 end
