@@ -38,12 +38,42 @@
 # array.shuffle!  #this method shuffles all elements in the array."!" mark is used to mutate the array
 # puts array    
 
-obj1={name:"srikanth",age:20}
-obj2={name:"vamshi",age:16}
-arr = [obj1,obj2]
-val= arr.include?(obj1)
-puts val
+# obj1={name:"srikanth",age:20}
+# obj2={name:"vamshi",age:16}
+# arr = [obj1,obj2]
+# val= arr.include?(obj1)
+# puts val
 
+
+# puts "srikanth"
+# a=rand(1000..9999)
+# puts a
+def time_difference_in_seconds(time1, time2)
+  # Calculate the absolute difference in seconds
+  seconds_diff = (time2 - time1).to_i.abs
+  puts seconds_diff
+  puts formatted_time
+  # Check if the difference is less than or equal to 1 minute (60 seconds)
+  if seconds_diff <= 60
+    return seconds_diff
+  else
+    raise ArgumentError, "Time difference exceeds 1 minute"
+  end
+end
+
+# Example usage
+time1 = Time.new(2021, 5, 15, 8, 45, 30)
+puts time1
+# sleep(30) # Wait for 30 seconds
+time2 = Time.now
+puts time2
+
+begin
+  seconds_diff = time_difference_in_seconds(time1, time2)
+  puts "The time difference is #{seconds_diff} seconds."
+rescue ArgumentError => e
+  puts e.message
+end
 
 
 

@@ -1,1 +1,1 @@
-nested_obj = Parent::Child.new
+sleep(30)
